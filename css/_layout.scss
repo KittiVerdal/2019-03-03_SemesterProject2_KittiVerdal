@@ -1,0 +1,37 @@
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 8px;
+  color: white;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+  text-align: center;
+
+  &:hover{
+    color: white;
+  }
+
+  &--big {
+    width: 250px;
+    height:auto;
+    border-radius: 60px;
+    font-size: 35px;
+    text-align: center;
+    font-family: $subFont;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    @media screen and (max-width:660px) {
+      font-size: 30px;
+    }
+  }
+
+  &--second {
+    @include gradient ($darkBlue,$lightBlue);
+  }
+
+  &--center {
+    margin: 0 auto;
+    display: block;
+  }
+}

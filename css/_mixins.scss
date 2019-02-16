@@ -1,0 +1,14 @@
+
+@mixin backImage ($image, $height:100vh, $bgPos:center center){
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-position: $bgPos;
+  background-size: cover;
+  height: $height;
+  margin-left: -15px;
+  margin-right: -15px;
+  }
+
+  @mixin gradient ($colorOne, $colorTwo, $angle:to right) {
+  background-image: linear-gradient($angle, $colorOne, $colorTwo)
+  }
