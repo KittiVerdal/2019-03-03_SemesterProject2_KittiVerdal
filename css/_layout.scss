@@ -1,3 +1,27 @@
+
+
+//Headlines
+h1 {
+  color:white;
+  font-family: $subFont;
+  font-weight: 400;
+
+  &.headers {
+    font-size: 100px;
+    line-height: 80px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    @media screen and (max-width:660px) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+}
+
+//Buttons and links
 a {
   text-decoration: none;
 }
@@ -5,8 +29,6 @@ a {
 .btn {
   padding: 8px;
   color: white;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
-  text-align: center;
 
   &:hover{
     color: white;
@@ -21,6 +43,8 @@ a {
     font-family: $subFont;
     font-weight: 300;
     letter-spacing: 0.8px;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
     @media screen and (max-width:660px) {
       font-size: 30px;
     }
@@ -34,4 +58,30 @@ a {
     margin: 0 auto;
     display: block;
   }
+
+  &__moreinfo{
+    font-family: $informationText;
+    width: 100%;
+    color: white;
+    margin-top: -65px;
+    text-align: right;
+    letter-spacing: 0.6px;
+    padding-right: 20px;
+
+    &:active {
+      color: white;
+    }
+    &:focus {
+      color: white;
+    }
+  }
+}
+
+//text-decoration
+.ornament{
+  width: 40%;
+  display:block;
+  margin: 0 auto;
+  margin-top:50px;
+
 }
