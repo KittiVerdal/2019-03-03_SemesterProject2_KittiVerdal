@@ -144,6 +144,10 @@ h2.characterName {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   display: block;
 
+  @media screen and (max-width:550px) {
+    padding-top: 160px;
+  }
+
   &--small{
     font-size: 24px;
     color: white;

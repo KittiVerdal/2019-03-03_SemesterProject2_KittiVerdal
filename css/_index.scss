@@ -1,5 +1,5 @@
 .intro {
-  @include backImage ("../images/background.jpg");
+  @include backImage ("../images/background.jpg", 100vh, top center);
 
   &__logo {
     width: 40%;
