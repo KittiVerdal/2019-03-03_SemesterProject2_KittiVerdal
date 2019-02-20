@@ -16,8 +16,10 @@ function toggle_information(
   var daenerys = document.getElementById(daeneyrsToggle);
   var khal = document.getElementById(khalToggle);
 
+
   if (tormund.style.display === "none")
     tormund.style.display = "block";
+
   else
     tormund.style.display = "none";
 
@@ -65,8 +67,8 @@ function toggle_information(
     khal.style.display = "block";
   else
     khal.style.display = "none";
-}
 
+}
 
 function imageLarge() {
   document.getElementById('arya').style.height = "500px";
@@ -93,6 +95,7 @@ function createPlayerInfo(result, id) {
     '<p class="[ characterText ]"><span class="[ characterText--color ]">Gender: </span> ' + result.gender + '</p>' +
     '<p class="[ characterText ]"><span class="[ characterText--color ]">Aliases: </span>' + result.aliases + '</p>';
   playerInfo.innerHTML += displayPlayer;
+
 };
 
 getCharacterData('https://www.anapioficeandfire.com/api/characters/2024', "tormundToggle");

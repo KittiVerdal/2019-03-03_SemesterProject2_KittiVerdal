@@ -1,46 +1,127 @@
+
+.background {
+  @include backImage ("../images/background--dark.jpg");
+
+}
+
 .characters {
   font-family: $mainFont;
   margin-left:10px;
   margin-right: 10px;
+  z-index: 200;
+
+  @media screen and (max-width:767px) {
+    margin-left:0px;
+    margin-right: 0px;
+    }
+
+  &--margin {
+    margin-bottom: -30px;
+  }
+
+  &--bottom {
+    padding-bottom: 90px;
+  }
+
 
   &__tormund {
     @include backImage ("../images/tormund.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__yrgitte {
     @include backImage ("../images/yrgitte.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__john {
     @include backImage ("../images/john-snow.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__sansa {
     @include backImage ("../images/sansa-stark.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__arya {
     @include backImage ("../images/arya.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__tyrion {
     @include backImage ("../images/tyrion.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__cercei {
     @include backImage ("../images/cercei.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__jamie {
     @include backImage ("../images/jamie.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__daeneyrs {
     @include backImage ("../images/daenerys.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__khal {
     @include backImage ("../images/khaldrogo.jpg", 300px, top center);
+
+    @media screen and (max-width:550px) {
+      min-height: 100px;
+      max-height:250px !important;
+      background-position: top left;
+      }
   }
 
   &__symbol{
@@ -122,6 +203,7 @@ h3.characterHouse {
     color: $lightGrey;
   }
 }
+
 
 //Accordion stylesheet
 /* Style the buttons that are used to open and close the accordion panel */
