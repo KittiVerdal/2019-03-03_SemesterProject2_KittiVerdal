@@ -27,6 +27,10 @@
   &__tormund {
     @include backImage ("../images/tormund.jpg", 300px, top center);
 
+    &:hover {
+      @include backImage ("../images/tormund.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
+
     @media screen and (max-width:550px) {
       min-height: 100px;
       max-height:250px !important;
@@ -36,6 +40,10 @@
 
   &__yrgitte {
     @include backImage ("../images/yrgitte.jpg", 300px, top center);
+
+    &:hover {
+      @include backImage ("../images/yrgitte.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
 
     @media screen and (max-width:550px) {
       min-height: 100px;
@@ -47,6 +55,10 @@
   &__john {
     @include backImage ("../images/john-snow.jpg", 300px, top center);
 
+    &:hover {
+      @include backImage ("../images/john-snow.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
+
     @media screen and (max-width:550px) {
       min-height: 100px;
       max-height:250px !important;
@@ -56,6 +68,10 @@
 
   &__sansa {
     @include backImage ("../images/sansa-stark.jpg", 300px, top center);
+
+    &:hover {
+      @include backImage ("../images/sansa-stark.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
 
     @media screen and (max-width:550px) {
       min-height: 100px;
@@ -67,6 +83,10 @@
   &__arya {
     @include backImage ("../images/arya.jpg", 300px, top center);
 
+    &:hover {
+      @include backImage ("../images/arya.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
+
     @media screen and (max-width:550px) {
       min-height: 100px;
       max-height:250px !important;
@@ -76,6 +96,10 @@
 
   &__tyrion {
     @include backImage ("../images/tyrion.jpg", 300px, top center);
+
+    &:hover {
+      @include backImage ("../images/tyrion.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
 
     @media screen and (max-width:550px) {
       min-height: 100px;
@@ -87,6 +111,10 @@
   &__cercei {
     @include backImage ("../images/cercei.jpg", 300px, top center);
 
+    &:hover {
+      @include backImage ("../images/cercei.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
+
     @media screen and (max-width:550px) {
       min-height: 100px;
       max-height:250px !important;
@@ -96,6 +124,10 @@
 
   &__jamie {
     @include backImage ("../images/jamie.jpg", 300px, top center);
+
+    &:hover {
+      @include backImage ("../images/jamie.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
 
     @media screen and (max-width:550px) {
       min-height: 100px;
@@ -107,6 +139,10 @@
   &__daeneyrs {
     @include backImage ("../images/daenerys.jpg", 300px, top center);
 
+    &:hover {
+      @include backImage ("../images/daenerys.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
+
     @media screen and (max-width:550px) {
       min-height: 100px;
       max-height:250px !important;
@@ -116,6 +152,10 @@
 
   &__khal {
     @include backImage ("../images/khaldrogo.jpg", 300px, top center);
+
+    &:hover {
+      @include backImage ("../images/khaldrogo.jpg", 300px, top center, rgba(0,0,0,.4));
+    }
 
     @media screen and (max-width:550px) {
       min-height: 100px;
@@ -130,6 +170,9 @@
     margin-right: 15px;
     margin-top: 15px;
     opacity: 0.9;
+    @media screen and (max-width:430px) {
+      width: 35%;
+    }
   }
 }
 
