@@ -16,11 +16,19 @@
         <div class="[ row ]">
           <div class="[ col-sm-12 ][ animated fadeInUp ]">
             <img class="[ intro__logo ]" src="images/logo-white.svg" alt="Master of the Houses">
-            <a class="[ btn btn--big btn--second btn--center ]" href="characters.html">Start</a>
+            <div class="[ form ]">
+              <input class="[form form__usernameInput ]" type="text" maxlength="14"/>
+            </div>
+            <h3 class="[ form__title ]">What's your nickname?</h3>
+            <a class="[ btn btn--big btn--second btn--start ]" href="characters.html">Start</a>
           </div><!---column-->
         </div><!---row-->
       </div> <!---container-->
     </div><!---intro-->
   </div><!---container-fluid-->
+  <script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+</script>
 </body>
 </html>

@@ -1,19 +1,16 @@
-
 .background {
   @include backImage ("../images/background--dark.jpg");
-
 }
 
 .characters {
   font-family: $mainFont;
-  margin-left:10px;
+  margin-left: 10px;
   margin-right: 10px;
   z-index: 200;
-
   @media screen and (max-width:767px) {
-    margin-left:0px;
-    margin-right: 0px;
-    }
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   &--margin {
     margin-bottom: -30px;
@@ -23,145 +20,147 @@
     padding-bottom: 90px;
   }
 
-
   &__tormund {
-    @include backImage ("../images/tormund.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/tormund.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/tormund.jpg", 300px, top left);
+    @include transition(height 3s ease);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/tormund.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__yrgitte {
-    @include backImage ("../images/yrgitte.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/yrgitte.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/yrgitte.jpg", 300px, top left);
+    @include transition(height 3s ease);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/yrgitte.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__john {
-    @include backImage ("../images/john-snow.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/john-snow.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/john-snow.jpg", 300px, top left);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/john-snow.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__sansa {
-    @include backImage ("../images/sansa-stark.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/sansa-stark.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/sansa-stark.jpg", 300px, top left);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/sansa-stark.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__arya {
-    @include backImage ("../images/arya.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/arya.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/arya.jpg", 300px, top left);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/arya.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__tyrion {
-    @include backImage ("../images/tyrion.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/tyrion.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/tyrion.jpg", 300px, top left);
+    @include transition(height 2s ease);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/tyrion.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__cercei {
-    @include backImage ("../images/cercei.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/cercei.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/cercei.jpg", 300px, top left);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/cercei.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__jamie {
-    @include backImage ("../images/jamie.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/jamie.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/jamie.jpg", 300px, top left);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/jamie.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__daeneyrs {
-    @include backImage ("../images/daenerys.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/daenerys.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/daenerys.jpg", 300px, top left);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/daenerys.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__khal {
-    @include backImage ("../images/khaldrogo.jpg", 300px, top center);
-
-    &:hover {
-      @include backImage ("../images/khaldrogo.jpg", 300px, top center, rgba(0,0,0,.4));
+    @include backImage ("../images/khaldrogo.jpg", 300px, top left);
+    @media screen and (max-width:550px) {
+      height: 230px;
     }
 
-    @media screen and (max-width:550px) {
-      min-height: 100px;
-      max-height:250px !important;
-      background-position: top left;
+    &:hover {
+      @include backImage ("../images/khaldrogo.jpg", 300px, top left, rgba(0,0,0,.4));
+      @media screen and (max-width:550px) {
+        height: 230px;
       }
+    }
   }
 
   &__symbol{
@@ -187,8 +186,10 @@ h2.characterName {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   display: block;
 
+
   @media screen and (max-width:550px) {
-    padding-top: 160px;
+    padding-top: 165px;
+    font-size: 24px;
   }
 
   &--small{
@@ -199,10 +200,11 @@ h2.characterName {
   }
 }
 
+
 .characterInfo{
   padding:0 20px 20px 20px;
   background-color: $darkBlue;
-  margin-top: -20px;
+  margin-top: 10px;
   border-top: 5px solid $lightBlue;
   z-index: 200;
   margin-left: -15px;
@@ -249,6 +251,18 @@ h3.characterHouse {
   &--grey{
     color: $lightGrey;
   }
+}
+
+#bottomHidden{
+  position: fixed;
+  bottom: 0px;
+  padding:10px;
+  padding-bottom: 15px;
+  background-color: $black;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
 }
 
 

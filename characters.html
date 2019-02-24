@@ -20,7 +20,7 @@
         <div class="[ row ]">
           <div class="[ col-sm-12 ]">
             <img class="[ ornament ] [ animated fadeInUp ]" src="images/ornament.svg" alt="Symbol of wolf representing the house og Stark">
-            <h1 class="[ headers ] [ animated fadeInUp ]">Choose your character</h1>
+            <h1 class="[ headers ] [ animated fadeInUp ]" id="header">Choose your character</h1>
           </div>
           <!---column-->
         </div>
@@ -28,32 +28,32 @@
         <div class="[ row ]">
 
           <!---Tormund-->
-          <div class="[ col-md-offset-2 col-md-8 ]">
-            <a href="#">
-              <div class="[ characters ] [ animated fadeInUp ]">
-                <div class="[ characters__tormund characters--margin ]" data-name="Tormund" id="tormund">
+          <div class="[ col-md-offset-2 col-md-8 ]" id="tormund">
+            <a class="[ top ]">
+              <div class="[ characters ] [ animated fadeInUp ]" onclick="playerTormund(tormund)">
+                <div class="[ characters__tormund characters--margin ]">
                   <img class="[ characters__symbol ]" src="images/wildlings.svg" alt="Symbol of mamut representing the wildlings">
                   <h2 class="[ characterName ]">Tormund</h2>
                   <h3 class="[ characterHouse ]">Wildlings</h3>
                 </div>
             </a>
 
-            <a class="[ btn btn__moreinfo ]" id="toggle" onclick="toggle_information('tormundToggle');">View more &#9662;</a>
+            <a class="[ btn btn__moreinfo ]" onclick="toggle_information('tormundToggle');">View more &#9662;</a>
             <div class="[ characterInfo ][ animated slideInDown ]" id="tormundToggle" style="display: none">
 
-            <!---Tormund Javascript comes here - fetch from API URL-->
-
+              <!---Tormund Javascript comes here - fetch from API URL-->
 
             </div>
           </div>
+          <!---column-->
         </div>
-        <!---column-->
+
 
         <!---Yrgitte-->
-        <div class="[ col-md-offset-2 col-md-8 ]">
+        <div class="[ col-md-offset-2 col-md-8 ]" id="yrgitte">
           <a href="#">
             <div class="[ characters ] [ animated fadeInUp ]">
-              <div class="[ characters__yrgitte characters--margin ]" data-name="Yrgitte" id="yrgitte">
+              <div class="[ characters__yrgitte characters--margin ]" onclick="playerYrgitte(yrgitte)">
                 <img class="[ characters__symbol ]" src="images/wildlings.svg" alt="Symbol of mamut representing the wildlings">
                 <h2 class="[ characterName ]">Yrgitte</h2>
                 <h3 class="[ characterHouse ]">Wildlings</h3>
@@ -61,195 +61,200 @@
           </a>
 
           <a class="[ btn btn__moreinfo ]" onclick="toggle_information('yrgitteToggle');">View more &#9662;</a>
-          <div class="[ characterInfo ]" id="yrgitteToggle" style="display: none">
+          <div class="[ characterInfo ] [ animated slideInDown ]" id="yrgitteToggle" style="display: none">
 
             <!---Yrgitte Javascript comes here - fetch from API URL-->
 
           </div>
         </div>
         <!---column-->
-        </div>
-
-        <!---John Snow-->
-        <div class="[ col-md-offset-2 col-md-8 ]">
-          <a href="#">
-            <div class="[ characters ] [ animated fadeInUp ]">
-              <div class="[ characters__john characters--margin ]" data-name="John Snow" id="john">
-                <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
-                <h2 class="[ characterName ]">John Snow</h2>
-                <h3 class="[ characterHouse ]">House Stark of Winterfell</h3>
-              </div>
-          </a>
-
-          <a class="[ btn btn__moreinfo ]" onclick="toggle_information('johnToggle');">View more &#9662;</a>
-          <div class="[ characterInfo ]" id="johnToggle" style="display: none">
-
-            <!---John Snow Javascript comes here - fetch from API URL-->
-
-          </div>
-        </div>
-        <!---column-->
-        </div>
-
-        <!---Sansa Stark-->
-        <div class="[ col-md-offset-2 col-md-8 ]">
-          <a href="#">
-            <div class="[ characters ] [ animated fadeInUp ]">
-              <div class="[ characters__sansa characters--margin ]" data-name="Sansa Stark" id="sansa">
-                <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
-                <h2 class="[ characterName ]">Sansa Stark</h2>
-                <h3 class="[ characterHouse ]">House Stark of Winterfell</h3>
-              </div>
-          </a>
-
-          <a class="[ btn btn__moreinfo ]" onclick="toggle_information('sansaToggle');">View more &#9662;</a>
-          <div class="[ characterInfo ]" id="sansaToggle" style="display: none">
-
-            <!---Sansa Stark Javascript comes here - fetch from API URL-->
-
-          </div>
-        </div>
-        <!---column-->
-        </div>
-
-        <!---Arya Stark-->
-        <div class="[ col-md-offset-2 col-md-8 ]">
-          <a href="#">
-            <div class="[ characters ] [ animated fadeInUp ]">
-              <div class="[ characters__arya characters--margin ]" data-name="Arya Stark" id="arya" onclick="imageLarge()">
-                <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
-                <h2 class="[ characterName ]">Arya Stark</h2>
-                <h3 class="[ characterHouse ]">House Stark of Winterfell</h3>
-              </div>
-          </a>
-
-          <a class="[ btn btn__moreinfo ]" onclick="toggle_information('aryaToggle');">View more &#9662;</a>
-          <div class="[ characterInfo ]" id="aryaToggle" style="display: none">
-
-            <!---Arya Stark Javascript comes here - fetch from API URL-->
-
-            </div>
-          </div>
-          <!---column-->
       </div>
 
-      <!---Tyrion Lannister-->
-      <div class="[ col-md-offset-2 col-md-8 ]">
+      <!---John Snow-->
+      <div class="[ col-md-offset-2 col-md-8 ]" id="john">
         <a href="#">
           <div class="[ characters ] [ animated fadeInUp ]">
-            <div class="[ characters__tyrion characters--margin ]" data-name="Tyrion Lannister" id="tyrion">
-              <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
-              <h2 class="[ characterName ]">Tyrion Lannister</h2>
-              <h3 class="[ characterHouse characterHouse--red ]">House Lannister of Westeros</h3>
+            <div class="[ characters__john characters--margin ]" onclick="playerJohn(john)">
+              <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
+              <h2 class="[ characterName ]">John Snow</h2>
+              <h3 class="[ characterHouse ]">House Stark</h3>
             </div>
         </a>
 
-        <a class="[ btn btn__moreinfo ]" onclick="toggle_information('tyrionToggle');">View more &#9662;</a>
-        <div class="[ characterInfo characterInfo--red ]" id="tyrionToggle" style="display: none">
+        <a class="[ btn btn__moreinfo ]" onclick="toggle_information('johnToggle');">View more &#9662;</a>
+        <div class="[ characterInfo ] [ animated slideInDown ]" id="johnToggle" style="display: none">
 
-          <!---Tyrion Lannister Javascript comes here - fetch from API URL-->
+          <!---John Snow Javascript comes here - fetch from API URL-->
 
-          </div>
         </div>
-        <!---column-->
+      </div>
+      <!---column-->
+    </div>
+
+    <!---Sansa Stark-->
+    <div class="[ col-md-offset-2 col-md-8 ]" id="sansa">
+      <a href="#">
+        <div class="[ characters ] [ animated fadeInUp ]">
+          <div class="[ characters__sansa characters--margin ]" onclick="playerSansa(sansa)">
+            <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
+            <h2 class="[ characterName ]">Sansa Stark</h2>
+            <h3 class="[ characterHouse ]">House Stark</h3>
+          </div>
+      </a>
+
+      <a class="[ btn btn__moreinfo ]" onclick="toggle_information('sansaToggle');">View more &#9662;</a>
+      <div class="[ characterInfo ][ animated slideInDown ]" id="sansaToggle" style="display: none">
+
+        <!---Sansa Stark Javascript comes here - fetch from API URL-->
 
       </div>
+    </div>
+    <!---column-->
+  </div>
 
-      <!---Cercei Lannister-->
-      <div class="[ col-md-offset-2 col-md-8 ]">
-        <a href="#">
-          <div class="[ characters ] [ animated fadeInUp ]">
-            <div class="[ characters__cercei characters--margin ]" data-name="Cercei Lannister" id="cercei">
-              <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
-              <h2 class="[ characterName ]">Cercei Lannister</h2>
-              <h3 class="[ characterHouse characterHouse--red ]">House Lannister of Westeros</h3>
-            </div>
-        </a>
-
-        <a class="[ btn btn__moreinfo ]" onclick="toggle_information('cerceiToggle');">View more &#9662;</a>
-        <div class="[ characterInfo characterInfo--red ]" id="cerceiToggle" style="display: none">
-
-          <!---Cercei Lannister Javascript comes here - fetch from API URL-->
-
-          </div>
+  <!---Arya Stark-->
+  <div class="[ col-md-offset-2 col-md-8 ]" id="arya">
+    <a href="#">
+      <div class="[ characters ] [ animated fadeInUp ]">
+        <div class="[ characters__arya characters--margin ]" onclick="playerArya(arya)">
+          <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
+          <h2 class="[ characterName ]">Arya Stark</h2>
+          <h3 class="[ characterHouse ]">House Stark</h3>
         </div>
-        <!---column-->
+    </a>
 
-      </div>
+    <a class="[ btn btn__moreinfo ]" onclick="toggle_information('aryaToggle');">View more &#9662;</a>
+    <div class="[ characterInfo ] [ animated slideInDown ]" id="aryaToggle" style="display: none">
 
-      <!---Jamie Lannister-->
-      <div class="[ col-md-offset-2 col-md-8 ]">
-        <a href="#">
-          <div class="[ characters ] [ animated fadeInUp ]">
-            <div class="[ characters__jamie characters--margin ]" data-name="Jamie Lannister" id="jamie">
-              <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
-              <h2 class="[ characterName ]">Jamie Lannister</h2>
-              <h3 class="[ characterHouse characterHouse--red ]">House Lannister of Westeros</h3>
-            </div>
-        </a>
+      <!---Arya Stark Javascript comes here - fetch from API URL-->
 
-        <a class="[ btn btn__moreinfo ]" onclick="toggle_information('jamieToggle');">View more &#9662;</a>
-        <div class="[ characterInfo characterInfo--red ]" id="jamieToggle" style="display: none">
+    </div>
+  </div>
+  <!---column-->
+  </div>
 
-          <!---Jamie Lannister Javascript comes here - fetch from API URL-->
-
-          </div>
+  <!---Tyrion Lannister-->
+  <div class="[ col-md-offset-2 col-md-8 ]" id="tyrion">
+    <a href="#">
+      <div class="[ characters ] [ animated fadeInUp ]">
+        <div class="[ characters__tyrion characters--margin ]" id="tyrion" onclick="playerTyrion(tyrion)">
+          <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
+          <h2 class="[ characterName ]">Tyrion Lannister</h2>
+          <h3 class="[ characterHouse characterHouse--red ]">House Lannister</h3>
         </div>
-        <!---column-->
+    </a>
 
-      </div>
+    <a class="[ btn btn__moreinfo ]" onclick="toggle_information('tyrionToggle');">View more &#9662;</a>
+    <div class="[ characterInfo characterInfo--red ] [ animated slideInDown ]" id="tyrionToggle" style="display: none">
 
-      <!---Daeneyrs Targaryen-->
-      <div class="[ col-md-offset-2 col-md-8 ]">
-        <a href="#">
-          <div class="[ characters ] [ animated fadeInUp ]">
-            <div class="[ characters__daeneyrs characters--margin ]" data-name="Daeneyrs Targaryen" id="daeneyrs">
-              <img class="[ characters__symbol ]" src="images/targaryen.svg" alt="Symbol of dragon representing the house of Targaryen">
-              <h2 class="[ characterName ]">Daeneyrs Targaryen</h2>
-              <h3 class="[ characterHouse characterHouse--grey ]">House Targaryen</h3>
-            </div>
-        </a>
+      <!---Tyrion Lannister Javascript comes here - fetch from API URL-->
 
-        <a class="[ btn btn__moreinfo ]" onclick="toggle_information('daeneyrsToggle');">View more &#9662;</a>
-        <div class="[ characterInfo characterInfo--grey ]" id="daeneyrsToggle" style="display: none">
-
-          <!---Daeneyrs Targaryen Javascript comes here - fetch from API URL-->
-
-          </div>
-        </div>
-        <!---column-->
-
-      </div>
-
-      <!---Khal Drogo-->
-      <div class="[ col-md-offset-2 col-md-8 ]">
-        <a href="#">
-          <div class="[ characters characters--bottom ] [ animated fadeInUp ]">
-            <div class="[ characters__khal characters--margin ]" data-name="Khal Drogo" id="khal">
-              <img class="[ characters__symbol ]" src="images/dothraki.svg" alt="Symbol of dragon representing the house of Targaryen">
-              <h2 class="[ characterName ]">Khal Drogo</h2>
-              <h3 class="[ characterHouse characterHouse--grey ]">House Dothraki</h3>
-            </div>
-        </a>
-
-        <a class="[ btn btn__moreinfo ]" onclick="toggle_information('khalToggle');">View more &#9662;</a>
-        <div class="[ characterInfo characterInfo--grey ]" id="khalToggle" style="display: none">
-
-          <!---Khal Drogo Javascript comes here - fetch from API URL-->
-
-          </div>
-        </div>
-        <!---column-->
-
-      </div>
-
-
-      <!---row-->
-
-
+    </div>
+  </div>
+  <!---column-->
 
   </div>
-  <!---container-->
+
+  <!---Cercei Lannister-->
+  <div class="[ col-md-offset-2 col-md-8 ]" id="cercei">
+    <a href="#">
+      <div class="[ characters ] [ animated fadeInUp ]">
+        <div class="[ characters__cercei characters--margin ]" onclick="playerCercei(cercei)">
+          <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
+          <h2 class="[ characterName ]">Cercei Lannister</h2>
+          <h3 class="[ characterHouse characterHouse--red ]">House Lannister</h3>
+        </div>
+    </a>
+
+    <a class="[ btn btn__moreinfo ]" onclick="toggle_information('cerceiToggle');">View more &#9662;</a>
+    <div class="[ characterInfo characterInfo--red ] [ animated slideInDown ]" id="cerceiToggle" style="display: none">
+
+      <!---Cercei Lannister Javascript comes here - fetch from API URL-->
+
+    </div>
+  </div>
+  <!---column-->
+
+  </div>
+
+  <!---Jamie Lannister-->
+  <div class="[ col-md-offset-2 col-md-8 ]" id="jamie">
+    <a href="#">
+      <div class="[ characters ] [ animated fadeInUp ]">
+        <div class="[ characters__jamie characters--margin ]" onclick="playerJamie(jamie)">
+          <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
+          <h2 class="[ characterName ]">Jamie Lannister</h2>
+          <h3 class="[ characterHouse characterHouse--red ]">House Lannister</h3>
+        </div>
+    </a>
+
+    <a class="[ btn btn__moreinfo ]" onclick="toggle_information('jamieToggle');">View more &#9662;</a>
+    <div class="[ characterInfo characterInfo--red ] [ animated slideInDown ]" id="jamieToggle" style="display: none">
+
+      <!---Jamie Lannister Javascript comes here - fetch from API URL-->
+
+    </div>
+  </div>
+  <!---column-->
+
+  </div>
+
+  <!---Daeneyrs Targaryen-->
+  <div class="[ col-md-offset-2 col-md-8 ]" id="daeneyrs">
+    <a href="#">
+      <div class="[ characters ] [ animated fadeInUp ]">
+        <div class="[ characters__daeneyrs characters--margin ]" id="daeneyrs" onclick="playerDaeneyrs(daeneyrs)">
+          <img class="[ characters__symbol ]" src="images/targaryen.svg" alt="Symbol of dragon representing the house of Targaryen">
+          <h2 class="[ characterName ]">Daeneyrs Targaryen</h2>
+          <h3 class="[ characterHouse characterHouse--grey ]">House Targaryen</h3>
+        </div>
+    </a>
+
+    <a class="[ btn btn__moreinfo ]" onclick="toggle_information('daeneyrsToggle');">View more &#9662;</a>
+    <div class="[ characterInfo characterInfo--grey ][ animated slideInDown ]" id="daeneyrsToggle" style="display: none">
+
+      <!---Daeneyrs Targaryen Javascript comes here - fetch from API URL-->
+
+    </div>
+  </div>
+  <!---column-->
+
+  </div>
+
+  <!---Khal Drogo-->
+  <div class="[ col-md-offset-2 col-md-8 ]" id="khal">
+    <a href="#">
+      <div class="[ characters characters--bottom ] [ animated fadeInUp ]">
+        <div class="[ characters__khal characters--margin ]" onclick="playerKhal(khal)">
+          <img class="[ characters__symbol ]" src="images/dothraki.svg" alt="Symbol of dragon representing the house of Targaryen">
+          <h2 class="[ characterName ]">Khal Drogo</h2>
+          <h3 class="[ characterHouse characterHouse--grey ]">House Dothraki</h3>
+        </div>
+    </a>
+
+    <a class="[ btn btn__moreinfo ]" onclick="toggle_information('khalToggle');">View more &#9662;</a>
+    <div class="[ characterInfo characterInfo--grey ][ animated slideInDown ]" id="khalToggle" style="display: none">
+
+      <!---Khal Drogo Javascript comes here - fetch from API URL-->
+
+    </div>
+  </div>
+  <!---column-->
+</div>
+<!---container-->
+  </div>
+  <!---row-->
+  <div class="row">
+  <<div class="[ bottom ]" id="bottomHidden" style="display: none">
+  <div class="[ col-md-offset-1 col-md-4 ]">
+    <a class="[ btn btn--big btn--second btn--bottom ]" href="characters.html">Back</a>
+  </div>
+  <div class="[ col-md-4 ]">
+    <a class="[ btn btn--big btn--primary btn--bottom ]" href="opponent.html">Next</a>
+  </div>
+  </div>
+  </div>
+
   </div>
   <!---intro-->
   </div>
