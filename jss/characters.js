@@ -1,4 +1,4 @@
-//Variables
+//Variables hide characters
 var selectTormund = ['yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
 var selectYrgitte = ['tormund', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
 var selectJohn = ['tormund', 'yrgitte', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
@@ -10,9 +10,25 @@ var selectJamie = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cer
 var selectDaeneyrs = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'khal']
 var selectKhal = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs']
 
-//Toggeling API information
+//Charactercount
+var countCharacters = 0;
 
 
+// Local storage functions
+function resetLocalStorage(){
+    localStorage.clear();
+};
+
+function addValuesToLocalStorage(key, value){
+    localStorage.setItem(key, value);
+};
+
+function removeValueFromLocalStorage(key){
+    localStorage.removeItem(key);
+};
+
+
+// Toggeling API information
 function toggle_information(tormundToggle, yrgitteToggle, johnToggle, sansaToggle, aryaToggle, tyrionToggle, cerceiToggle, jamieToggle, daeneyrsToggle, khalToggle) {
 
   var tormund = document.getElementById(tormundToggle);
@@ -129,7 +145,7 @@ function changeHeader(){
 
 
 getCharacterData('https://www.anapioficeandfire.com/api/characters/2024', "tormundToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/2026', "yrgitteToggle");
+getCharacterData('https://www.anapioficeandfire.com/api/characters/2126', "yrgitteToggle");
 getCharacterData('https://www.anapioficeandfire.com/api/characters/583', "johnToggle");
 getCharacterData('https://www.anapioficeandfire.com/api/characters/957', "sansaToggle");
 getCharacterData('https://www.anapioficeandfire.com/api/characters/148', "aryaToggle");
@@ -169,7 +185,7 @@ function showButtons() {
 
 //Select player
 
-function playerTormund(tormund) {
+function playerTormund(tormund, character) {
   var t = document.querySelector('.characters__tormund');
   t.style.height = "45vh";
   t.classList.add("animated");
@@ -179,29 +195,35 @@ function playerTormund(tormund) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerTormund", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectTormund.length; i++) {
     document.getElementById(selectTormund[i]).style.display = "none";
   }
 }
 
-function playerYrgitte(yrgitte) {
+function playerYrgitte(yrgitte, character) {
   var y = document.querySelector('.characters__yrgitte');
   y.style.height = "45vh";
   y.classList.add("animated");
   y.classList.add("fadeInUp");
   y.classList.add("slow");
-  getCharacterName('https://www.anapioficeandfire.com/api/characters/2026', "header");
+  getCharacterName('https://www.anapioficeandfire.com/api/characters/2126', "header");
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerYrgitte", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectYrgitte.length; i++) {
     document.getElementById(selectYrgitte[i]).style.display = "none";
   }
 }
 
-function playerJohn(john) {
+function playerJohn(john, character) {
   var j = document.querySelector('.characters__john');
   j.style.height = "45vh";
   j.classList.add("animated");
@@ -211,13 +233,16 @@ function playerJohn(john) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerJohn", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectJohn.length; i++) {
     document.getElementById(selectJohn[i]).style.display = "none";
   }
 }
 
-function playerSansa(sansa) {
+function playerSansa(sansa, character) {
   var s = document.querySelector('.characters__sansa');
   s.style.height = "45vh";
   s.classList.add("animated");
@@ -227,13 +252,16 @@ function playerSansa(sansa) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerSansa", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectSansa.length; i++) {
     document.getElementById(selectSansa[i]).style.display = "none";
   }
 }
 
-function playerArya(arya) {
+function playerArya(arya, character) {
   var a = document.querySelector('.characters__arya');
   a.style.height = "45vh";
   a.classList.add("animated");
@@ -243,13 +271,16 @@ function playerArya(arya) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerArya", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectArya.length; i++) {
     document.getElementById(selectArya[i]).style.display = "none";
   }
 }
 
-function playerTyrion(tyrion) {
+function playerTyrion(tyrion, character) {
   var ty = document.querySelector('.characters__tyrion');
   ty.style.height = "45vh";
   ty.classList.add("animated");
@@ -259,13 +290,16 @@ function playerTyrion(tyrion) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerTyrion", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectTyrion.length; i++) {
     document.getElementById(selectTyrion[i]).style.display = "none";
   }
 }
 
-function playerCercei(cercei) {
+function playerCercei(cercei, character) {
   var c = document.querySelector('.characters__cercei');
   c.style.height = "45vh";
   c.classList.add("animated");
@@ -275,13 +309,16 @@ function playerCercei(cercei) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerCercei", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectCercei.length; i++) {
     document.getElementById(selectCercei[i]).style.display = "none";
   }
 }
 
-function playerJamie(jamie) {
+function playerJamie(jamie, character) {
   var ja = document.querySelector('.characters__jamie');
   ja.style.height = "45vh";
   ja.classList.add("animated");
@@ -291,13 +328,16 @@ function playerJamie(jamie) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerJamie", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectJamie.length; i++) {
     document.getElementById(selectJamie[i]).style.display = "none";
   }
 }
 
-function playerDaeneyrs(daeneyrs) {
+function playerDaeneyrs(daeneyrs, character) {
   var d = document.querySelector('.characters__daeneyrs');
   d.style.height = "45vh";
   d.classList.add("animated");
@@ -307,13 +347,16 @@ function playerDaeneyrs(daeneyrs) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerDaeneyrs", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectDaeneyrs.length; i++) {
     document.getElementById(selectDaeneyrs[i]).style.display = "none";
   }
 }
 
-function playerKhal(khal) {
+function playerKhal(khal, character) {
   var k = document.querySelector('.characters__khal');
   k.style.height = "45vh";
   k.classList.add("animated");
@@ -323,6 +366,9 @@ function playerKhal(khal) {
   removeTitle();
   showButtons();
   changeHeader();
+  addValuesToLocalStorage("playerKhal", character);
+  countCharacters = countCharacters + 1;
+  console.log(countCharacters);
 
   for (var i = 0; i < selectKhal.length; i++) {
     document.getElementById(selectKhal[i]).style.display = "none";

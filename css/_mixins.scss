@@ -1,15 +1,13 @@
 
-@mixin backImage ($image, $height:100%, $bgPos:center center, $alphaOne:rgba(0,0,0,0)){
+@mixin backImage ($image, $height:100%, $bgPos:center center, $alphaOne:rgba(0,0,0,0), $alphaTwo:rgba(0,0,0,.8)){
   background: linear-gradient(to bottom,
   $alphaOne,
-  rgba(0,0,0,.8)),
+  $alphaTwo),
   url($image);
   background-repeat: no-repeat;
   background-position: $bgPos;
   background-size: cover;
   height: $height;
-  margin-left: -15px;
-  margin-right: -15px;
   }
 
   @mixin gradient ($colorOne, $colorTwo, $angle:to right) {
