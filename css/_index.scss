@@ -1,5 +1,7 @@
 .intro {
   @include backImage ("../images/background.jpg", 100vh, top center);
+  margin-left:-15px;
+  margin-right: -15px;
 
   &__logo {
     width: 40%;
@@ -27,7 +29,7 @@
   margin-bottom: 150px;
   display: block;
   margin: 0 auto;
-  @media screen and (max-width:400px) {
+  @media screen and (max-width:500px) {
     width: 80%;
   }
 
