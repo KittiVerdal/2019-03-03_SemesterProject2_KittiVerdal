@@ -13,7 +13,7 @@
   <title>Master of the Houses | Game of thrones online game</title>
 </head>
 
-<body onload="[ resetLocalStorage() ]" class="[ marginBottom ]">
+<body onload="resetLocalStorage()" class="[ marginBottom ]">
   <div class="[ container-fluid ]">
     <div class="[ background ]">
       <div class="[ container ][ intro__container ]">
@@ -30,7 +30,7 @@
           <!---Tormund-->
           <div class="[ col-md-offset-2 col-md-8 ]" id="tormund">
             <a class="[ top ]">
-              <div class="[ characters ] [ animated fadeInUp ]" onclick="playerTormund(tormund)">
+              <div class="[ characters ] [ animated fadeInUp ]" onclick="displayPlayer('tormund')">
                 <div class="[ characters__tormund characters--margin ]">
                   <img class="[ characters__symbol ]" src="images/wildlings.svg" alt="Symbol of mamut representing the wildlings">
                   <h2 class="[ characterName ]">Tormund</h2>
@@ -53,7 +53,7 @@
         <div class="[ col-md-offset-2 col-md-8 ]" id="yrgitte">
           <a href="#">
             <div class="[ characters ] [ animated fadeInUp ]">
-              <div class="[ characters__yrgitte characters--margin ]" onclick="playerYrgitte(yrgitte)">
+              <div class="[ characters__yrgitte characters--margin ]" onclick="displayPlayer('yrgitte')">
                 <img class="[ characters__symbol ]" src="images/wildlings.svg" alt="Symbol of mamut representing the wildlings">
                 <h2 class="[ characterName ]">Ygritte</h2>
                 <h3 class="[ characterHouse ]">Wildlings</h3>
@@ -74,7 +74,7 @@
       <div class="[ col-md-offset-2 col-md-8 ]" id="john">
         <a href="#">
           <div class="[ characters ] [ animated fadeInUp ]">
-            <div class="[ characters__john characters--margin ]" onclick="playerJohn(john)">
+            <div class="[ characters__john characters--margin ]" onclick="displayPlayer('john')">
               <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
               <h2 class="[ characterName ]">John Snow</h2>
               <h3 class="[ characterHouse ]">House Stark</h3>
@@ -95,7 +95,7 @@
     <div class="[ col-md-offset-2 col-md-8 ]" id="sansa">
       <a href="#">
         <div class="[ characters ] [ animated fadeInUp ]">
-          <div class="[ characters__sansa characters--margin ]" onclick="playerSansa(sansa)">
+          <div class="[ characters__sansa characters--margin ]" onclick="displayPlayer('sansa')">
             <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
             <h2 class="[ characterName ]">Sansa Stark</h2>
             <h3 class="[ characterHouse ]">House Stark</h3>
@@ -116,7 +116,7 @@
   <div class="[ col-md-offset-2 col-md-8 ]" id="arya">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
-        <div class="[ characters__arya characters--margin ]" onclick="playerArya(arya)">
+        <div class="[ characters__arya characters--margin ]" onclick="displayPlayer('arya')">
           <img class="[ characters__symbol ]" src="images/starks.svg" alt="Symbol of wolf representing the house og Stark">
           <h2 class="[ characterName ]">Arya Stark</h2>
           <h3 class="[ characterHouse ]">House Stark</h3>
@@ -137,7 +137,7 @@
   <div class="[ col-md-offset-2 col-md-8 ]" id="tyrion">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
-        <div class="[ characters__tyrion characters--margin ]" id="tyrion" onclick="playerTyrion(tyrion)">
+        <div class="[ characters__tyrion characters--margin ]" id="tyrion" onclick="displayPlayer('tyrion')">
           <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
           <h2 class="[ characterName ]">Tyrion Lannister</h2>
           <h3 class="[ characterHouse characterHouse--red ]">House Lannister</h3>
@@ -159,7 +159,7 @@
   <div class="[ col-md-offset-2 col-md-8 ]" id="cercei">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
-        <div class="[ characters__cercei characters--margin ]" onclick="playerCercei(cercei)">
+        <div class="[ characters__cercei characters--margin ]" onclick="displayPlayer('cercei')">
           <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
           <h2 class="[ characterName ]">Cercei Lannister</h2>
           <h3 class="[ characterHouse characterHouse--red ]">House Lannister</h3>
@@ -181,7 +181,7 @@
   <div class="[ col-md-offset-2 col-md-8 ]" id="jamie">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
-        <div class="[ characters__jamie characters--margin ]" onclick="playerJamie(jamie)">
+        <div class="[ characters__jamie characters--margin ]" onclick="displayPlayer('jamie')">
           <img class="[ characters__symbol ]" src="images/lannisters.svg" alt="Symbol of lion representing the house og Lannister">
           <h2 class="[ characterName ]">Jamie Lannister</h2>
           <h3 class="[ characterHouse characterHouse--red ]">House Lannister</h3>
@@ -203,7 +203,7 @@
   <div class="[ col-md-offset-2 col-md-8 ]" id="daeneyrs">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
-        <div class="[ characters__daeneyrs characters--margin ]" id="daeneyrs" onclick="playerDaeneyrs(daeneyrs)">
+        <div class="[ characters__daeneyrs characters--margin ]" id="daeneyrs" onclick="displayPlayer('daeneyrs')">
           <img class="[ characters__symbol ]" src="images/targaryen.svg" alt="Symbol of dragon representing the house of Targaryen">
           <h2 class="[ characterName ]">Daeneyrs Targaryen</h2>
           <h3 class="[ characterHouse characterHouse--grey ]">House Targaryen</h3>
@@ -225,7 +225,7 @@
   <div class="[ col-md-offset-2 col-md-8 ]" id="khal">
     <a href="#">
       <div class="[ characters characters--bottom ] [ animated fadeInUp ]">
-        <div class="[ characters__khal characters--margin ]" onclick="playerKhal(khal)">
+        <div class="[ characters__khal characters--margin ]" onclick="displayPlayer('khal')">
           <img class="[ characters__symbol ]" src="images/dothraki.svg" alt="Symbol of dragon representing the house of Targaryen">
           <h2 class="[ characterName ]">Khal Drogo</h2>
           <h3 class="[ characterHouse characterHouse--grey ]">House Dothraki</h3>

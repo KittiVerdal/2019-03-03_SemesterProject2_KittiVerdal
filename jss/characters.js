@@ -1,14 +1,14 @@
 //Variables hide characters
-var selectTormund = ['yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
-var selectYrgitte = ['tormund', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
-var selectJohn = ['tormund', 'yrgitte', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
-var selectSansa = ['tormund', 'yrgitte', 'john', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
-var selectArya = ['tormund', 'yrgitte', 'john', 'sansa', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
-var selectTyrion = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'cercei', 'jamie', 'daeneyrs', 'khal']
-var selectCercei = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'jamie', 'daeneyrs', 'khal']
-var selectJamie = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'daeneyrs', 'khal']
-var selectDaeneyrs = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'khal']
-var selectKhal = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs']
+var selecttormund = ['yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
+var selectyrgitte = ['tormund', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
+var selectjohn = ['tormund', 'yrgitte', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
+var selectsansa = ['tormund', 'yrgitte', 'john', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
+var selectarya = ['tormund', 'yrgitte', 'john', 'sansa', 'tyrion', 'cercei', 'jamie', 'daeneyrs', 'khal']
+var selecttyrion = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'cercei', 'jamie', 'daeneyrs', 'khal']
+var selectcercei = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'jamie', 'daeneyrs', 'khal']
+var selectjamie = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'daeneyrs', 'khal']
+var selectdaeneyrs = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'khal']
+var selectkhal = ['tormund', 'yrgitte', 'john', 'sansa', 'arya', 'tyrion', 'cercei', 'jamie', 'daeneyrs']
 
 //Charactercount
 var countCharacters = 0;
@@ -26,6 +26,8 @@ function addValuesToLocalStorage(key, value){
 function removeValueFromLocalStorage(key){
     localStorage.removeItem(key);
 };
+
+//Toggle information
 
 function toggle_information(characterInfo) {
   document.getElementById('tormundToggle').style.display = 'none';
@@ -48,13 +50,10 @@ function toggle_information(characterInfo) {
            }
        }
 
-
 //API fetch and creating the cards
 
 function getCharacterData(Url, id) {
-  fetch(Url, {
-      mode: 'cors'
-    })
+  fetch(Url)
     .then((response) => {
       return response.json();
     })
@@ -65,9 +64,7 @@ function getCharacterData(Url, id) {
 }
 
 function getCharacterName(Url, id) {
-  fetch(Url, {
-      mode: 'cors'
-    })
+  fetch(Url)
     .then((response) => {
       return response.json();
     })
@@ -97,7 +94,6 @@ function changeHeader(){
   reduzeTitle.classList.add("headers__character");
 
 }
-
 
 getCharacterData('https://www.anapioficeandfire.com/api/characters/2024', "tormundToggle");
 getCharacterData('https://www.anapioficeandfire.com/api/characters/2126', "yrgitteToggle");
@@ -140,7 +136,88 @@ function showButtons() {
 
 //Select player
 
-function playerTormund(tormund, character) {
+function displayPlayer(name, character){
+  var t = document.querySelector('.characters__'+ name +');
+  t.style.height = "45vh";
+  t.classList.add("animated");
+  t.classList.add("fadeInUp");
+  t.classList.add("slow");
+  for (var i = 0; i < select+name.length; i++) {
+    document.getElementById(select+name[i]).style.display = "none";
+  }
+  removeTitle();
+  showButtons();
+  changeHeader();
+  switch(name){
+    removeTitle();
+    showButtons();
+    changeHeader();
+    case'tormund':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/2024', "header");
+    addValuesToLocalStorage("playerTormund", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'yrgitte':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/2126', "header");
+    addValuesToLocalStorage("playerYrgitte", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'john':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/583', "header");
+    addValuesToLocalStorage("playerJohn", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'sansa':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/957', "header");
+    addValuesToLocalStorage("playerSansa", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'arya':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/148', "header");
+    addValuesToLocalStorage("playerArya", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'tyrion':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/1052', "header");
+    addValuesToLocalStorage("playerTyrion", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'cercei':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/238', "header");
+    addValuesToLocalStorage("playerCercei", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'jamie':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/529', "header");
+    addValuesToLocalStorage("playerJamie", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'daeneyrs':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/271', "header");
+    addValuesToLocalStorage("playerDaeneyrs", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    case'khal':
+    getCharacterName('https://www.anapioficeandfire.com/api/characters/1278', "header");
+    addValuesToLocalStorage("playerKhal", character);
+    countCharacters = countCharacters + 1;
+    console.log(countCharacters);
+    break;
+    default:
+    console.log('There seems to be a problem, please try again later');
+  }
+}
+
+/*function playerTormund(tormund, character) {
   var t = document.querySelector('.characters__tormund');
   t.style.height = "45vh";
   t.classList.add("animated");
@@ -154,12 +231,11 @@ function playerTormund(tormund, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectTormund.length; i++) {
-    document.getElementById(selectTormund[i]).style.display = "none";
+  for (var i = 0; i < selecttormund.length; i++) {
+    document.getElementById(selecttormund[i]).style.display = "none";
   }
-}
-
-function playerYrgitte(yrgitte, character) {
+}*/
+/*function playerYrgitte(yrgitte, character) {
   var y = document.querySelector('.characters__yrgitte');
   y.style.height = "45vh";
   y.classList.add("animated");
@@ -173,12 +249,11 @@ function playerYrgitte(yrgitte, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectYrgitte.length; i++) {
-    document.getElementById(selectYrgitte[i]).style.display = "none";
+  for (var i = 0; i < selectyrgitte.length; i++) {
+    document.getElementById(selectyrgitte[i]).style.display = "none";
   }
-}
-
-function playerJohn(john, character) {
+}*/
+/*function playerJohn(john, character) {
   var j = document.querySelector('.characters__john');
   j.style.height = "45vh";
   j.classList.add("animated");
@@ -192,12 +267,11 @@ function playerJohn(john, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectJohn.length; i++) {
-    document.getElementById(selectJohn[i]).style.display = "none";
+  for (var i = 0; i < selectjohn.length; i++) {
+    document.getElementById(selectjohn[i]).style.display = "none";
   }
-}
-
-function playerSansa(sansa, character) {
+}*/
+/*function playerSansa(sansa, character) {
   var s = document.querySelector('.characters__sansa');
   s.style.height = "45vh";
   s.classList.add("animated");
@@ -211,12 +285,11 @@ function playerSansa(sansa, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectSansa.length; i++) {
-    document.getElementById(selectSansa[i]).style.display = "none";
+  for (var i = 0; i < selectsansa.length; i++) {
+    document.getElementById(selectsansa[i]).style.display = "none";
   }
-}
-
-function playerArya(arya, character) {
+}*/
+/*function playerArya(arya, character) {
   var a = document.querySelector('.characters__arya');
   a.style.height = "45vh";
   a.classList.add("animated");
@@ -230,12 +303,11 @@ function playerArya(arya, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectArya.length; i++) {
-    document.getElementById(selectArya[i]).style.display = "none";
+  for (var i = 0; i < selectarya.length; i++) {
+    document.getElementById(selectarya[i]).style.display = "none";
   }
-}
-
-function playerTyrion(tyrion, character) {
+}*/
+/*function playerTyrion(tyrion, character) {
   var ty = document.querySelector('.characters__tyrion');
   ty.style.height = "45vh";
   ty.classList.add("animated");
@@ -249,12 +321,11 @@ function playerTyrion(tyrion, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectTyrion.length; i++) {
-    document.getElementById(selectTyrion[i]).style.display = "none";
+  for (var i = 0; i < selecttyrion.length; i++) {
+    document.getElementById(selecttyrion[i]).style.display = "none";
   }
-}
-
-function playerCercei(cercei, character) {
+}*/
+/*function playerCercei(cercei, character) {
   var c = document.querySelector('.characters__cercei');
   c.style.height = "45vh";
   c.classList.add("animated");
@@ -268,12 +339,11 @@ function playerCercei(cercei, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectCercei.length; i++) {
-    document.getElementById(selectCercei[i]).style.display = "none";
+  for (var i = 0; i < selectcercei.length; i++) {
+    document.getElementById(selectcercei[i]).style.display = "none";
   }
-}
-
-function playerJamie(jamie, character) {
+}*/
+/*function playerJamie(jamie, character) {
   var ja = document.querySelector('.characters__jamie');
   ja.style.height = "45vh";
   ja.classList.add("animated");
@@ -287,12 +357,11 @@ function playerJamie(jamie, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectJamie.length; i++) {
-    document.getElementById(selectJamie[i]).style.display = "none";
+  for (var i = 0; i < selectjamie.length; i++) {
+    document.getElementById(selectjamie[i]).style.display = "none";
   }
-}
-
-function playerDaeneyrs(daeneyrs, character) {
+}*/
+/*function playerDaeneyrs(daeneyrs, character) {
   var d = document.querySelector('.characters__daeneyrs');
   d.style.height = "45vh";
   d.classList.add("animated");
@@ -306,12 +375,11 @@ function playerDaeneyrs(daeneyrs, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectDaeneyrs.length; i++) {
-    document.getElementById(selectDaeneyrs[i]).style.display = "none";
+  for (var i = 0; i < selectdaeneyrs.length; i++) {
+    document.getElementById(selectdaeneyrs[i]).style.display = "none";
   }
-}
-
-function playerKhal(khal, character) {
+}*/
+/*function playerKhal(khal, character) {
   var k = document.querySelector('.characters__khal');
   k.style.height = "45vh";
   k.classList.add("animated");
@@ -325,10 +393,10 @@ function playerKhal(khal, character) {
   countCharacters = countCharacters + 1;
   console.log(countCharacters);
 
-  for (var i = 0; i < selectKhal.length; i++) {
-    document.getElementById(selectKhal[i]).style.display = "none";
+  for (var i = 0; i < selectkhal.length; i++) {
+    document.getElementById(selectkhal[i]).style.display = "none";
   }
-}
+}*/
 
 /*function deleteButton(removeBtn){
   var removeBtn = document.querySelectorAll('.btn__moreinfo');
