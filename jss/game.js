@@ -25,7 +25,7 @@ var yCircle = [ 3650, 3470, 3300,
 
 
 //Game Path
-ctx.lineWidth = 20;
+ctx.lineWidth = 15;
 ctx.strokeStyle = "#47636F";
 
 ctx.beginPath();
@@ -96,13 +96,6 @@ ctx.stroke();
 
 //save sale
 ctx.save();
-
-ctx.scale(0.1,0.1);
-ctx.drawImage(stark, 500, 500);
-
-ctx.restore();
-ctx.save();
-
 
 //circles
 

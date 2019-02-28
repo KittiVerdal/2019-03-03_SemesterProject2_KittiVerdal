@@ -615,13 +615,59 @@ h3.characterHouse--grey {
   width: 2000px;
 }
 
-#gameCanvas {
-  display: block;
-  margin: 0 auto;
+.houseIcon {
+  opacity: 0.8;
+  position: absolute;
+  width: 280px;
 }
-
-#iconStark {
-  width: 100px;
+.houseIcon--stark {
+  left: 800px;
+  top: 1030px;
+}
+.houseIcon--wildlings {
+  top: 30px;
+  left: 1000px;
+  width: 200px;
+}
+.houseIcon--lannister {
+  top: 2160px;
+  width: 200px;
+  left: 540px;
+}
+.houseIcon--targaryon {
+  top: 2420px;
+  width: 200px;
+  left: 1200px;
+}
+.houseIcon--houseOne {
+  top: 3350px;
+  width: 200px;
+  left: 920px;
+}
+.houseIcon--houseTwo {
+  top: 3000px;
+  width: 200px;
+  left: 800px;
+}
+.houseIcon--houseTree {
+  top: 2820px;
+  width: 200px;
+  left: 1350px;
+}
+.houseIcon--houseFour {
+  top: 2280px;
+  width: 150px;
+  left: 920px;
+}
+.houseIcon--houseFive {
+  top: 1720px;
+  width: 230px;
+  left: 1100px;
+}
+.houseIcon--houseSix {
+  top: 1780px;
+  width: 200px;
+  left: 300px;
 }
 
 .bottom {
