@@ -15,16 +15,16 @@ var countCharacters = 0;
 
 
 // Local storage functions
-function resetLocalStorage(){
-    localStorage.clear();
+function resetLocalStorage() {
+  localStorage.clear();
 };
 
-function addValuesToLocalStorage(key, value){
-    localStorage.setItem(key, value);
+function addValuesToLocalStorage(key, value) {
+  localStorage.setItem(key, value);
 };
 
-function removeValueFromLocalStorage(key){
-    localStorage.removeItem(key);
+function removeValueFromLocalStorage(key) {
+  localStorage.removeItem(key);
 };
 
 //Toggle information
@@ -42,13 +42,13 @@ function toggle_information(characterInfo) {
   document.getElementById('khalToggle').style.display = 'none';
   var selectedCharacter = document.getElementById(characterInfo);
 
-  if (selectedCharacter.style.display === "none"){
-      selectedCharacter.style.display = "block";
-      }
-  else{
-      selectedCharacter.style.display = "none";
-           }
-       }
+  if (selectedCharacter.style.display === "none") {
+    selectedCharacter.style.display = "block";
+  }
+   else {
+    selectedCharacter.style.display = "none";
+  }
+}
 
 //API fetch and creating the cards
 
@@ -74,10 +74,9 @@ function getCharacterName(Url, id) {
     });
 }
 
-
 function createPlayerInfo(result, id) {
   var playerInfo = document.getElementById(id);
-  var displayPlayer = '<h2 class="[ characterName--small ]">Title: ' + result.titles[0] + '</h2>' +
+  var displayPlayer = '<i class="[ fa fa-times ] [ close ]" onclick="toggle_information()"></i><h2 class="[ characterName--small ]">Title: ' + result.titles[0] + '</h2>' +
     '<p class="[ characterText ]"><span class="[ characterText--color ]">Culture: </span>' + result.culture + '</p>' +
     '<p class="[ characterText ]"><span class="[ characterText--color ]">Gender: </span> ' + result.gender + '</p>' +
     '<p class="[ characterText ]"><span class="[ characterText--color ]">Aliases: </span>' + result.aliases + '</p></div>';
@@ -89,9 +88,13 @@ function createHeader(result, id) {
   replaceTitle.innerHTML = "You chose<br> " + result.name;
 }
 
-function changeHeader(){
+function changeHeader() {
   var reduzeTitle = document.querySelector('.headers');
   reduzeTitle.classList.add("headers__character");
+
+}
+
+function closeToggle() {
 
 }
 
@@ -133,89 +136,88 @@ function showButtons() {
   buttons.style.display = "block";
 }
 
-
 //Select player
-
-function displayPlayer(name, character){
-  var t = document.querySelector('.characters__'+ name +');
-  t.style.height = "45vh";
-  t.classList.add("animated");
-  t.classList.add("fadeInUp");
-  t.classList.add("slow");
-  for (var i = 0; i < select+name.length; i++) {
-    document.getElementById(select+name[i]).style.display = "none";
+/*function displayPlayer(name, character) {
+  document.getElementById(name).style.height = "45vh";
+  document.getElementById(name).classList.add("animated");
+  document.getElementById(name).classList.add("fadeInUp");
+  document.getElementById(name).classList.add("slow");
+  for (var i = 0; i < select + name.length; i++) {
+    document.getElementById(select + name[i]).style.display = "none";
   }
   removeTitle();
   showButtons();
   changeHeader();
-  switch(name){
-    removeTitle();
-    showButtons();
-    changeHeader();
-    case'tormund':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/2024', "header");
-    addValuesToLocalStorage("playerTormund", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'yrgitte':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/2126', "header");
-    addValuesToLocalStorage("playerYrgitte", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'john':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/583', "header");
-    addValuesToLocalStorage("playerJohn", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'sansa':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/957', "header");
-    addValuesToLocalStorage("playerSansa", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'arya':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/148', "header");
-    addValuesToLocalStorage("playerArya", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'tyrion':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/1052', "header");
-    addValuesToLocalStorage("playerTyrion", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'cercei':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/238', "header");
-    addValuesToLocalStorage("playerCercei", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'jamie':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/529', "header");
-    addValuesToLocalStorage("playerJamie", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'daeneyrs':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/271', "header");
-    addValuesToLocalStorage("playerDaeneyrs", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
-    case'khal':
-    getCharacterName('https://www.anapioficeandfire.com/api/characters/1278', "header");
-    addValuesToLocalStorage("playerKhal", character);
-    countCharacters = countCharacters + 1;
-    console.log(countCharacters);
-    break;
+  switch (name) {
+    //var t = document.querySelector('.characters__'+ name +');
+    //t.style.height = "45vh";
+    //t.classList.add("animated");
+    //t.classList.add("fadeInUp");
+    //t.classList.add("slow");
+    case 'tormund':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/2024', "header");
+      addValuesToLocalStorage("playerTormund", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'yrgitte':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/2126', "header");
+      addValuesToLocalStorage("playerYrgitte", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'john':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/583', "header");
+      addValuesToLocalStorage("playerJohn", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'sansa':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/957', "header");
+      addValuesToLocalStorage("playerSansa", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'arya':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/148', "header");
+      addValuesToLocalStorage("playerArya", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'tyrion':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/1052', "header");
+      addValuesToLocalStorage("playerTyrion", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'cercei':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/238', "header");
+      addValuesToLocalStorage("playerCercei", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'jamie':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/529', "header");
+      addValuesToLocalStorage("playerJamie", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'daeneyrs':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/271', "header");
+      addValuesToLocalStorage("playerDaeneyrs", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
+    case 'khal':
+      getCharacterName('https://www.anapioficeandfire.com/api/characters/1278', "header");
+      addValuesToLocalStorage("playerKhal", character);
+      countCharacters = countCharacters + 1;
+      console.log(countCharacters);
+      break;
     default:
-    console.log('There seems to be a problem, please try again later');
+      console.log('There seems to be a problem, please try again later');
   }
-}
+}*/
 
 /*function playerTormund(tormund, character) {
   var t = document.querySelector('.characters__tormund');
