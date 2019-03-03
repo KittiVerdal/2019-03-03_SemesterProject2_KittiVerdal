@@ -258,15 +258,17 @@ h3.characterHouse {
   }
 }
 
-#bottomHidden {
+.bottom {
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
+  left: 0px;
+  right: 0px;
   padding: 10px 10px 15px;
   background-color: $black;
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
+  height: auto !important;
+  @media screen and (max-width:768px) {
+}
 }
 
 .close{

@@ -28,7 +28,7 @@
         <div class="[ row ]">
 
           <!---Tormund-->
-          <div class="[ col-md-offset-2 col-md-8 ]">
+          <div class="[ col-md-offset-2 col-md-8 ]" id="tormundPlayer">
             <a class="[ top ]">
               <div class="[ characters ] [ animated fadeInUp ]">
                 <div class="[ characters__tormund characters--margin ]"id="tormund"  onclick="displayPlayer('tormund')">
@@ -50,7 +50,7 @@
 
 
         <!---Yrgitte-->
-        <div class="[ col-md-offset-2 col-md-8 ]">
+        <div class="[ col-md-offset-2 col-md-8 ]" id="yrgittePlayer">
           <a href="#">
             <div class="[ characters ] [ animated fadeInUp ]">
               <div class="[ characters__yrgitte characters--margin ]" id="yrgitte" onclick="displayPlayer('yrgitte')">
@@ -71,7 +71,7 @@
       </div>
 
       <!---John Snow-->
-      <div class="[ col-md-offset-2 col-md-8 ]">
+      <div class="[ col-md-offset-2 col-md-8 ]" id="johnPlayer">
         <a href="#">
           <div class="[ characters ] [ animated fadeInUp ]">
             <div class="[ characters__john characters--margin ]" id="john" onclick="displayPlayer('john')">
@@ -92,7 +92,7 @@
     </div>
 
     <!---Sansa Stark-->
-    <div class="[ col-md-offset-2 col-md-8 ]">
+    <div class="[ col-md-offset-2 col-md-8 ]" id="sansaPlayer">
       <a href="#">
         <div class="[ characters ] [ animated fadeInUp ]">
           <div class="[ characters__sansa characters--margin ]" id="sansa" onclick="displayPlayer('sansa')">
@@ -113,7 +113,7 @@
   </div>
 
   <!---Arya Stark-->
-  <div class="[ col-md-offset-2 col-md-8 ]">
+  <div class="[ col-md-offset-2 col-md-8 ]" id="aryaPlayer">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
         <div class="[ characters__arya characters--margin ]" id="arya" onclick="displayPlayer('arya')">
@@ -134,7 +134,7 @@
   </div>
 
   <!---Tyrion Lannister-->
-  <div class="[ col-md-offset-2 col-md-8 ]">
+  <div class="[ col-md-offset-2 col-md-8 ]" id="tyrionPlayer">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
         <div class="[ characters__tyrion characters--margin ]" id="tyrion" onclick="displayPlayer('tyrion')">
@@ -156,7 +156,7 @@
   </div>
 
   <!---Cercei Lannister-->
-  <div class="[ col-md-offset-2 col-md-8 ]">
+  <div class="[ col-md-offset-2 col-md-8 ]" id="cerceiPlayer">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
         <div class="[ characters__cercei characters--margin ]" id="cercei" onclick="displayPlayer('cercei')">
@@ -178,7 +178,7 @@
   </div>
 
   <!---Jamie Lannister-->
-  <div class="[ col-md-offset-2 col-md-8 ]">
+  <div class="[ col-md-offset-2 col-md-8 ]" id="jamiePlayer">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
         <div class="[ characters__jamie characters--margin ]" id="jamie" onclick="displayPlayer('jamie')">
@@ -200,7 +200,7 @@
   </div>
 
   <!---Daeneyrs Targaryen-->
-  <div class="[ col-md-offset-2 col-md-8 ]">
+  <div class="[ col-md-offset-2 col-md-8 ]" id="daeneyrsPlayer">
     <a href="#">
       <div class="[ characters ] [ animated fadeInUp ]">
         <div class="[ characters__daeneyrs characters--margin ]" id="daeneyrs" onclick="displayPlayer('daeneyrs')">
@@ -222,7 +222,7 @@
   </div>
 
   <!---Khal Drogo-->
-  <div class="[ col-md-offset-2 col-md-8 ]">
+  <div class="[ col-md-offset-2 col-md-8 ]" id="khalPlayer">
     <a href="#">
       <div class="[ characters characters--bottom ] [ animated fadeInUp ]">
         <div class="[ characters__khal characters--margin ]" id="khal" onclick="displayPlayer('khal')">
@@ -241,24 +241,27 @@
   </div>
   <!---column-->
 </div>
-<!---container-->
   </div>
+</div>
+</div>
+</div>
+<!---intro-->
+<!---container-fluid-->
   <!---row-->
-  <div class="row">
-  <<div class="[ bottom ]" id="bottomHidden" style="display: none">
-  <div class="[ col-md-offset-1 col-md-4 ]">
-    <a class="[ btn btn--big btn--second btn--bottom ]" href="characters.html">Back</a>
-  </div>
-  <div class="[ col-md-4 ]">
-    <a class="[ btn btn--big btn--primary btn--bottom ]" href="opponent.html">Next</a>
-  </div>
-  </div>
+  <div class="[ bottom ]" id="bottomHidden" style="display: none">
+    <div class="container">
+        <div class="row">
+        <div class="[ col-sm-6 ]">
+          <a class="[ btn btn--big btn--second btn--bottom  ]" href="characters.html">Back</a>
+        </div>
+        <div class="[ col-sm-6 ]">
+          <a class="[ btn btn--big btn--primary btn--bottom ]" href="opponent.html">Next</a>
+        </div>
+        </div>
+    </div>
   </div>
 
-  </div>
-  <!---intro-->
-  </div>
-  <!---container-fluid-->
+
   <script src="jss/characters.js"></script>
 </body>
 
