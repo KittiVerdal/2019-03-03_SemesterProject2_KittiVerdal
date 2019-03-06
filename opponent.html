@@ -19,14 +19,170 @@
       <div class="[ container ][ intro__container ]">
         <div class="[ row ]">
           <div class="[ col-sm-12 ]">
-            <img class="[ ornament ] [ animated fadeInUp ]" src="images/ornament.svg" alt="Symbol of wolf representing the house og Stark">
+            <img class="[ ornament ] [ animated fadeInUp ]" src="images/ornament.svg" alt="Antique onament in blue">
             <h1 class="[ headers ] [ animated fadeInUp ]">Challenge your opponent</h1>
           </div>
         </div>
-        <div id="playerTwo"></div>
-        <!---Character Javascript comes here - fetch from API-->
-
-        <div class="[ player player__image player__image--last ]"></div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/ygritte-avatar.jpg" alt="Yrgitte avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Ygritte</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponentygritte" onclick="selectPlayerTwo('ygritte')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/jon-avatar.jpg" alt="Jon Snow avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Jon Snow</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponentjon" onclick="selectPlayerTwo('jon')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/sansa-avatar.jpg" alt="Sansa Stark avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Sansa Stark</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponentsansa" onclick="selectPlayerTwo('sansa')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/arya-avatar.jpg" alt="Arya Stark avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Arya Stark</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponentarya" onclick="selectPlayerTwo('arya')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/tormund-avatar.jpg" alt="Tormund avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Tormund</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponenttormund" onclick="selectPlayerTwo('tormund')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/cercei-avatar.jpg" alt="Cercei Lannister avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Cercei Lannister</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponentcercei" onclick="selectPlayerTwo('cercei')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/daenerys-avatar.jpg" alt="Daeneyrs Targaryen avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Daeneyrs Targaryen</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponentdaenerys" onclick="selectPlayerTwo('daenerys')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/tyrion-avatar.jpg" alt="Tyrion Lannister avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Tyrion Lannister</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponenttyrion" onclick="selectPlayerTwo('tyrion')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/jaime-avatar.jpg" alt="Jamie Lannister avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Jamie Lannister</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponentjamie" onclick="selectPlayerTwo('jamie')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border ]"></div>
+        </div>
+        <div class="row">
+          <div class="[ player ]">
+            <div class="[ col-xs-1 ]">
+              <img class="[ player__image ] [ animated fadeInUp ]" src="images/khal-avatar.jpg" alt="Khal Drogo avatar"></div>
+            <div class="[ col-xs-11 ][ player--border ]">
+              <h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">Khal Drogo</span> </h4>
+              <h3 class="[ player__name ]">Player Two</h3>
+              <a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="opponentkhal" onclick="selectPlayerTwo('khal')">Select</a>
+            </div>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+        <div class="[ row ]">
+          <div class="[ col-sm-12 ][ border border--bottom ]"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,9 +190,11 @@
   <div class="[ bottom margin ]">
     <div class="container">
       <div class="row">
-        <div class="[ col-sm-12 ]">
-          <i class="[ fa fa-arrow-circle-up fa-5x ][ warning warning__arrow ]"></i>
-          <p class="[ warning warning--margin ]">You have to select your opponent first</p>
+        <div id="warning" style="display: none;">
+          <div class="[ col-sm-12 ]">
+            <i class="[ fa fa-arrow-circle-up fa-5x ][ warning warning__arrow ]"></i>
+            <p class="[ warning warning--margin ]">You have to select your opponent first</p>
+          </div>
         </div>
 
         <div class="row">
@@ -44,7 +202,7 @@
             <a class="[ btn btn--big btn--second btn--bottom  ]" href="characters.html">Back</a>
           </div>
           <div class="[ col-sm-6 ]">
-            <a class="[ btn btn--big btn--second btn--bottom ]" href="game.html#startPosition" id="startGame">Start game</a>
+            <a class="[ btn btn--big btn--second btn--bottom ]" href="#" id="startGame">Start game</a>
           </div>
         </div>
       </div>

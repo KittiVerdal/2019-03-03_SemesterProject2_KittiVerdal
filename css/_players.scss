@@ -1,0 +1,375 @@
+
+#playerOne{
+  @include players(3620px, 960px);
+}
+#playerTwo{
+  @include players(3620px, 1020px);
+}
+
+#playerOne[data-number="1"]{
+  @include players(3440px, 825px);
+}
+
+#playerTwo[data-number="1"]{
+  @include players(3440px, 850px);
+}
+
+#playerOne[data-number="2"]{
+  @include players(3270px, 745px);
+}
+
+#playerTwo[data-number="2"]{
+  @include players(3270px, 770px);
+}
+
+#playerOne[data-number="3"]{
+  @include players(3160px, 965px);
+}
+
+#playerTwo[data-number="3"]{
+  @include players(3160px, 990px);
+}
+
+#playerOne[data-number="4"]{
+  @include players(3020px, 1165px);
+}
+
+#playerTwo[data-number="4"]{
+  @include players(3020px, 1190px);
+}
+
+#playerOne[data-number="5"]{
+  @include players(2870px, 1265px);
+}
+
+#playerTwo[data-number="5"]{
+  @include players(2870px, 1290px);
+}
+
+#playerOne[data-number="6"]{
+  @include players(2670px, 1315px);
+}
+
+#playerTwo[data-number="6"]{
+  @include players(2670px, 1340px);
+}
+
+#playerOne[data-number="7"]{
+  @include players(2470px, 1015px);
+}
+
+#playerTwo[data-number="7"]{
+  @include players(2470px, 1040px);
+}
+//
+#playerOne[data-number="8"]{
+  @include players(2840px, 985px);
+}
+
+#playerTwo[data-number="8"]{
+  @include players(2840px, 1010px);
+}
+//
+#playerOne[data-number="9"]{
+  @include players(2850px, 905px);
+}
+
+#playerTwo[data-number="9"]{
+  @include players(2850px, 930px);
+}
+
+#playerOne[data-number="10"]{
+  @include players(2650px, 785px);
+}
+
+#playerTwo[data-number="10"]{
+  @include players(2650px, 810px);
+}
+//
+#playerOne[data-number="11"]{
+  @include players(2670px, 485px);
+}
+
+#playerTwo[data-number="11"]{
+  @include players(2670px, 510px);
+}
+
+#playerOne[data-number="12"]{
+  @include players(2470px, 465px);
+}
+
+#playerTwo[data-number="12"]{
+  @include players(2470px, 490px);
+}
+
+#playerOne[data-number="13"]{
+  @include players(2370px, 545px);
+}
+
+#playerTwo[data-number="13"]{
+  @include players(2370px, 570px);
+}
+
+#playerOne[data-number="14"]{
+  @include players(2320px, 715px);
+}
+
+#playerTwo[data-number="14"]{
+  @include players(2320px, 740px);
+}
+
+#playerOne[data-number="15"]{
+  @include players(2270px, 855px);
+}
+
+#playerTwo[data-number="15"]{
+  @include players(2270px, 880px);
+}
+
+#playerOne[data-number="16"]{
+  @include players(2170px, 1055px);
+}
+
+#playerTwo[data-number="16"]{
+  @include players(2170px, 1080px);
+}
+
+#playerOne[data-number="17"]{
+  @include players(1970px, 1155px);
+}
+
+#playerTwo[data-number="17"]{
+  @include players(1970px, 1180px);
+}
+
+#playerOne[data-number="18"]{
+  @include players(1750px, 855px);
+}
+
+#playerTwo[data-number="18"]{
+  @include players(1750px, 880px);
+}
+
+#playerOne[data-number="19"]{
+  @include players(1550px, 815px);
+}
+
+#playerTwo[data-number="19"]{
+  @include players(1550px, 840px);
+}
+
+#playerOne[data-number="20"]{
+  @include players(1350px, 915px);
+}
+
+#playerTwo[data-number="20"]{
+  @include players(1350px, 940px);
+}
+
+#playerOne[data-number="21"]{
+  @include players(1270px, 735px);
+}
+
+#playerTwo[data-number="21"]{
+  @include players(1270px, 760px);
+}
+
+#playerOne[data-number="22"]{
+  @include players(1220px, 585px);
+}
+
+#playerTwo[data-number="22"]{
+  @include players(1250px, 610px);
+}
+
+#playerOne[data-number="23"]{
+  @include players(1030px, 615px);
+}
+
+#playerTwo[data-number="23"]{
+  @include players(1030px, 640px);
+}
+
+#playerOne[data-number="24"]{
+  @include players(920px, 955px);
+}
+
+#playerTwo[data-number="24"]{
+  @include players(920px, 980px);
+}
+
+#playerOne[data-number="25"]{
+  @include players(760px, 995px);
+}
+
+#playerTwo[data-number="25"]{
+  @include players(760px, 1020px);
+}
+
+#playerOne[data-number="26"]{
+  @include players(600px, 1015px);
+}
+
+#playerTwo[data-number="26"]{
+  @include players(600px, 1040px);
+}
+
+#playerOne[data-number="27"]{
+  @include players(400px, 1165px);
+}
+
+#playerTwo[data-number="27"]{
+  @include players(400px, 1190px);
+}
+
+#playerOne[data-number="28"]{
+  @include players(270px, 1075px);
+}
+
+#playerTwo[data-number="28"]{
+  @include players(270px, 1100px);
+}
+
+#playerOne[data-number="29"]{
+  @include players(200px, 945px);
+}
+
+#playerTwo[data-number="29"]{
+  @include players(200px, 970px);
+}
+
+#playerOne[data-number="30"]{
+  @include players(120px, 835px);
+}
+
+#playerTwo[data-number="30"]{
+  @include players(120px, 860px);
+}
+
+//TILE PLACEMENTS
+.tile{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  visibility: hidden;
+}
+[data-tilenumber="1"]{
+  top:3450px;
+  left:855px;
+}
+[data-tilenumber="2"]{
+  top:3280px;
+  left:775px;
+}
+[data-tilenumber="3"]{
+  top:3170px;
+  left:995px;
+}
+[data-tilenumber="4"]{
+  top:3030px;
+  left:1195px;
+}
+[data-tilenumber="5"]{
+  top:2880px;
+  left:1295px;
+}
+[data-tilenumber="6"]{
+  top:2680px;
+  left:1345px;
+}
+[data-tilenumber="7"]{
+  top:2480px;
+  left:1045px;
+}
+[data-tilenumber="8"]{
+  top:2850px;
+  left:1015px;
+}
+[data-tilenumber="9"]{
+  top:2860px;
+  left:935px;
+}
+[data-tilenumber="10"]{
+  top:2660px;
+  left:815px;
+}
+[data-tilenumber="11"]{
+  top:2680px;
+  left:515px;
+}
+[data-tilenumber="12"]{
+  top:2480px;
+  left:495px;
+}
+[data-tilenumber="13"]{
+  top:2380px;
+  left:575px;
+}
+[data-tilenumber="14"]{
+  top:2330px;
+  left:745px;
+}
+[data-tilenumber="15"]{
+  top:2280px;
+  left:885px;
+}
+[data-tilenumber="16"]{
+  top:2180px;
+  left:1085px;
+}
+[data-tilenumber="17"]{
+  top:1980px;
+  left:1185px;
+}
+[data-tilenumber="18"]{
+  top:1760px;
+  left:885px;
+}
+[data-tilenumber="19"]{
+  top:1560px;
+  left:845px;
+}
+[data-tilenumber="20"]{
+  top:1360px;
+  left:945px;
+}
+[data-tilenumber="21"]{
+  top:1280px;
+  left:765px;
+}
+[data-tilenumber="22"]{
+  top:1230px;
+  left:615px;
+}
+[data-tilenumber="23"]{
+  top:1030px;
+  left:645px;
+}
+[data-tilenumber="24"]{
+  top:930px;
+  left:985px;
+}
+[data-tilenumber="25"]{
+  top:770px;
+  left:1025px;
+}
+[data-tilenumber="26"]{
+  top:620px;
+  left:1045px;
+}
+[data-tilenumber="27"]{
+  top:410px;
+  left:1195px;
+}
+[data-tilenumber="28"]{
+  top:280px;
+  left:1105px;
+}
+[data-tilenumber="29"]{
+  top:210px;
+  left:975px;
+}
+[data-tilenumber="30"]{
+  top:130px;
+  left:865px;
+}

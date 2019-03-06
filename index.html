@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,31 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <title>Master of the Houses | Game of thrones online game</title>
 </head>
+
 <body>
   <div class="[ container-fluid ]">
     <div class="[ intro ]">
       <div class="[ container ][ intro__container ]">
         <div class="[ row ]">
           <div class="[ col-sm-12 ][ animated fadeInUp ]">
-            <img class="[ intro__logo ]" src="images/logo-white.svg" alt="Master of the Houses">
+            <img class="[ intro__logo ]" src="images/logo-white.svg" alt="Master of the Houses logo">
+
+            <!--use when i get Socket.iq to work
             <div class="[ form ]">
               <input class="[form form__usernameInput ]" type="text" maxlength="14"/>
             </div>
-            <h3 class="[ form__title ]">What's your nickname?</h3>
+            <h3 class="[ form__title ]">What's your nickname?</h3>-->
             <a class="[ btn btn--big btn--second btn--start ]" href="characters.html">Start</a>
-          </div><!---column-->
-        </div><!---row-->
-      </div> <!---container-->
-    </div><!---intro-->
-  </div><!---container-fluid-->
-  <script src="/socket.io/socket.io.js"></script>
-<script>
-  var socket = io();
-</script>
+          </div>
+          <!---column-->
+        </div>
+        <!---row-->
+      </div>
+      <!---container-->
+    </div>
+    <!---intro-->
+  </div>
+  <!---container-fluid-->
 </body>
+
 </html>

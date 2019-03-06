@@ -12,11 +12,12 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <title>Master of the Houses | Challenge your opponent</title>
 </head>
+
 <body>
   <div class="[ container-fluid ]">
 
     <!--<div class="[ background ]">-->
-      <div class="animated fadeIn slower">
+    <div class="animated fadeIn slower">
       <img class="[ houseIcon houseIcon--stark ]" src="images/starks.svg" alt="Wolf symbol representing the Stark house">
       <img class="[ houseIcon houseIcon--lannister ]" src="images/lannisters.svg" alt="Lion symbol representing the Lannister house">
       <img class="[ houseIcon houseIcon--targaryon ]" src="images/targaryen.svg" alt="Dragon symbol representing the Targaryon house">
@@ -27,24 +28,32 @@
       <img class="[ houseIcon houseIcon--houseFive ]" src="images/house-icon-five.svg" alt="Eagle symbol representing the house five">
       <img class="[ houseIcon houseIcon--houseSix ]" src="images/house-icon-six.svg" alt="Octopus symbol representing the house six">
       <img class="[ houseIcon houseIcon--wildlings ]" src="images/wildlings.svg" alt="Mamut symbol representing the Wildlings"></div>
-      <div class="[ game ]">
+    <div class="[ game ]">
       <canvas id="gameCanvas" width="2000" height="3898">
-      Your browser does not support the canvas element.
+        Your browser does not support the canvas element.
       </canvas>
 
-      <div class="row">
-      <div class="[ bottom ]" id="startPosition">
-        <div class="container">
-      <div class="[ col-md-4 ]">
-        <a class="[ btn btn--big btn--second btn--bottom ]" href="characters.html">Back</a>
+        <div class="[ bottom ]" id="startPosition">
+          <div class="container">
+            <div class="row">
+            <div class="[ col-md-2 ]"></div>
+            <div class="[ col-md-2 ][ player__image--active ]" id="activePlayer"></div>
+            <div class="[ col-md-4 ]">
+              <a class="[ btn btn--big btn--primary btn--bottom ]" id="diceRoll" onclick="playGame()">Roll dice</a>
+            </div>
+            <div class="[ col-md-2 ][ dice dice__container ]" id="dice"></div>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
+      <div id="playerToken"></div>
+      <div id="activePlayer"></div>
+      <div id="displayTiles"></div>
 
-</div>
-      </div>
     </div>
   </div>
-<script src="jss/game.js"></script>
+  </div>
+  <script src="jss/map.js"></script>
+  <script src="jss/game.js"></script>
 </body>
+
 </html>

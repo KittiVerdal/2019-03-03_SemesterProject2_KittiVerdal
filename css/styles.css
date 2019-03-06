@@ -143,7 +143,7 @@ a {
   width: 40%;
   display: block;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 200px;
   margin-bottom: 90px;
 }
 @media screen and (max-width: 991px) {
@@ -154,6 +154,7 @@ a {
 @media screen and (max-width: 560px) {
   .intro__logo {
     width: 80%;
+    margin-top: 100px;
   }
 }
 
@@ -595,6 +596,9 @@ h3.characterHouse--grey {
     margin-bottom: -75px;
   }
 }
+.player__image--token {
+  width: 80px;
+}
 .player__character {
   font-family: "kepler-std", serif;
   margin-bottom: -10px;
@@ -629,6 +633,9 @@ h3.characterHouse--grey {
   border-bottom: 4px solid #47636F;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.border--bottom {
+  margin-bottom: 140px;
 }
 
 .warning {
@@ -738,6 +745,659 @@ h3.characterHouse--grey {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
+}
+
+#playerOne {
+  position: absolute;
+  top: 3620px;
+  left: 960px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo {
+  position: absolute;
+  top: 3620px;
+  left: 1020px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="1"] {
+  position: absolute;
+  top: 3440px;
+  left: 825px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="1"] {
+  position: absolute;
+  top: 3440px;
+  left: 850px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="2"] {
+  position: absolute;
+  top: 3270px;
+  left: 745px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="2"] {
+  position: absolute;
+  top: 3270px;
+  left: 770px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="3"] {
+  position: absolute;
+  top: 3160px;
+  left: 965px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="3"] {
+  position: absolute;
+  top: 3160px;
+  left: 990px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="4"] {
+  position: absolute;
+  top: 3020px;
+  left: 1165px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="4"] {
+  position: absolute;
+  top: 3020px;
+  left: 1190px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="5"] {
+  position: absolute;
+  top: 2870px;
+  left: 1265px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="5"] {
+  position: absolute;
+  top: 2870px;
+  left: 1290px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="6"] {
+  position: absolute;
+  top: 2670px;
+  left: 1315px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="6"] {
+  position: absolute;
+  top: 2670px;
+  left: 1340px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="7"] {
+  position: absolute;
+  top: 2470px;
+  left: 1015px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="7"] {
+  position: absolute;
+  top: 2470px;
+  left: 1040px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="8"] {
+  position: absolute;
+  top: 2840px;
+  left: 985px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="8"] {
+  position: absolute;
+  top: 2840px;
+  left: 1010px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="9"] {
+  position: absolute;
+  top: 2850px;
+  left: 905px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="9"] {
+  position: absolute;
+  top: 2850px;
+  left: 930px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="10"] {
+  position: absolute;
+  top: 2650px;
+  left: 785px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="10"] {
+  position: absolute;
+  top: 2650px;
+  left: 810px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="11"] {
+  position: absolute;
+  top: 2670px;
+  left: 485px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="11"] {
+  position: absolute;
+  top: 2670px;
+  left: 510px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="12"] {
+  position: absolute;
+  top: 2470px;
+  left: 465px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="12"] {
+  position: absolute;
+  top: 2470px;
+  left: 490px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="13"] {
+  position: absolute;
+  top: 2370px;
+  left: 545px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="13"] {
+  position: absolute;
+  top: 2370px;
+  left: 570px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="14"] {
+  position: absolute;
+  top: 2320px;
+  left: 715px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="14"] {
+  position: absolute;
+  top: 2320px;
+  left: 740px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="15"] {
+  position: absolute;
+  top: 2270px;
+  left: 855px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="15"] {
+  position: absolute;
+  top: 2270px;
+  left: 880px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="16"] {
+  position: absolute;
+  top: 2170px;
+  left: 1055px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="16"] {
+  position: absolute;
+  top: 2170px;
+  left: 1080px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="17"] {
+  position: absolute;
+  top: 1970px;
+  left: 1155px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="17"] {
+  position: absolute;
+  top: 1970px;
+  left: 1180px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="18"] {
+  position: absolute;
+  top: 1750px;
+  left: 855px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="18"] {
+  position: absolute;
+  top: 1750px;
+  left: 880px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="19"] {
+  position: absolute;
+  top: 1550px;
+  left: 815px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="19"] {
+  position: absolute;
+  top: 1550px;
+  left: 840px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="20"] {
+  position: absolute;
+  top: 1350px;
+  left: 915px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="20"] {
+  position: absolute;
+  top: 1350px;
+  left: 940px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="21"] {
+  position: absolute;
+  top: 1270px;
+  left: 735px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="21"] {
+  position: absolute;
+  top: 1270px;
+  left: 760px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="22"] {
+  position: absolute;
+  top: 1220px;
+  left: 585px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="22"] {
+  position: absolute;
+  top: 1250px;
+  left: 610px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="23"] {
+  position: absolute;
+  top: 1030px;
+  left: 615px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="23"] {
+  position: absolute;
+  top: 1030px;
+  left: 640px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="24"] {
+  position: absolute;
+  top: 920px;
+  left: 955px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="24"] {
+  position: absolute;
+  top: 920px;
+  left: 980px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="25"] {
+  position: absolute;
+  top: 760px;
+  left: 995px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="25"] {
+  position: absolute;
+  top: 760px;
+  left: 1020px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="26"] {
+  position: absolute;
+  top: 600px;
+  left: 1015px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="26"] {
+  position: absolute;
+  top: 600px;
+  left: 1040px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="27"] {
+  position: absolute;
+  top: 400px;
+  left: 1165px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="27"] {
+  position: absolute;
+  top: 400px;
+  left: 1190px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="28"] {
+  position: absolute;
+  top: 270px;
+  left: 1075px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="28"] {
+  position: absolute;
+  top: 270px;
+  left: 1100px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="29"] {
+  position: absolute;
+  top: 200px;
+  left: 945px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="29"] {
+  position: absolute;
+  top: 200px;
+  left: 970px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerOne[data-number="30"] {
+  position: absolute;
+  top: 120px;
+  left: 835px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+#playerTwo[data-number="30"] {
+  position: absolute;
+  top: 120px;
+  left: 860px;
+  transition: all 3s;
+  border: 2px solid white;
+}
+
+.tile {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  visibility: hidden;
+}
+
+[data-tilenumber="1"] {
+  top: 3450px;
+  left: 855px;
+}
+
+[data-tilenumber="2"] {
+  top: 3280px;
+  left: 775px;
+}
+
+[data-tilenumber="3"] {
+  top: 3170px;
+  left: 995px;
+}
+
+[data-tilenumber="4"] {
+  top: 3030px;
+  left: 1195px;
+}
+
+[data-tilenumber="5"] {
+  top: 2880px;
+  left: 1295px;
+}
+
+[data-tilenumber="6"] {
+  top: 2680px;
+  left: 1345px;
+}
+
+[data-tilenumber="7"] {
+  top: 2480px;
+  left: 1045px;
+}
+
+[data-tilenumber="8"] {
+  top: 2850px;
+  left: 1015px;
+}
+
+[data-tilenumber="9"] {
+  top: 2860px;
+  left: 935px;
+}
+
+[data-tilenumber="10"] {
+  top: 2660px;
+  left: 815px;
+}
+
+[data-tilenumber="11"] {
+  top: 2680px;
+  left: 515px;
+}
+
+[data-tilenumber="12"] {
+  top: 2480px;
+  left: 495px;
+}
+
+[data-tilenumber="13"] {
+  top: 2380px;
+  left: 575px;
+}
+
+[data-tilenumber="14"] {
+  top: 2330px;
+  left: 745px;
+}
+
+[data-tilenumber="15"] {
+  top: 2280px;
+  left: 885px;
+}
+
+[data-tilenumber="16"] {
+  top: 2180px;
+  left: 1085px;
+}
+
+[data-tilenumber="17"] {
+  top: 1980px;
+  left: 1185px;
+}
+
+[data-tilenumber="18"] {
+  top: 1760px;
+  left: 885px;
+}
+
+[data-tilenumber="19"] {
+  top: 1560px;
+  left: 845px;
+}
+
+[data-tilenumber="20"] {
+  top: 1360px;
+  left: 945px;
+}
+
+[data-tilenumber="21"] {
+  top: 1280px;
+  left: 765px;
+}
+
+[data-tilenumber="22"] {
+  top: 1230px;
+  left: 615px;
+}
+
+[data-tilenumber="23"] {
+  top: 1030px;
+  left: 645px;
+}
+
+[data-tilenumber="24"] {
+  top: 930px;
+  left: 985px;
+}
+
+[data-tilenumber="25"] {
+  top: 770px;
+  left: 1025px;
+}
+
+[data-tilenumber="26"] {
+  top: 620px;
+  left: 1045px;
+}
+
+[data-tilenumber="27"] {
+  top: 410px;
+  left: 1195px;
+}
+
+[data-tilenumber="28"] {
+  top: 280px;
+  left: 1105px;
+}
+
+[data-tilenumber="29"] {
+  top: 210px;
+  left: 975px;
+}
+
+[data-tilenumber="30"] {
+  top: 130px;
+  left: 865px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,6 +10,7 @@ var selectcercei = ['tormundPlayer', 'yrgittePlayer', 'johnPlayer', 'sansaPlayer
 var selectjamie = ['tormundPlayer', 'yrgittePlayer', 'johnPlayer', 'sansaPlayer', 'aryaPlayer', 'tyrionPlayer', 'cerceiPlayer', 'daeneyrsPlayer', 'khalPlayer'];
 var selectdaeneyrs = ['tormundPlayer', 'yrgittePlayer', 'johnPlayer', 'sansaPlayer', 'aryaPlayer', 'tyrionPlayer', 'cerceiPlayer', 'jamiePlayer', 'khalPlayer'];
 var selectkhal = ['tormundPlayer', 'yrgittePlayer', 'johnPlayer', 'sansaPlayer', 'aryaPlayer', 'tyrionPlayer', 'cerceiPlayer', 'jamiePlayer', 'daeneyrsPlayer'];
+var count = 0;
 
 // Local storage functions
 function resetLocalStorage() {
@@ -20,43 +21,39 @@ function addValuesToLocalStorage(key, value) {
   localStorage.setItem(key, value);
 };
 
-function removeValueFromLocalStorage(key) {
-  localStorage.removeItem(key);
-};
-
-//Toggle information
-function toggle_information(characterInfo) {
-  document.getElementById('tormundToggle').style.display = 'none';
-  document.getElementById('yrgitteToggle').style.display = 'none';
-  document.getElementById('johnToggle').style.display = 'none';
-  document.getElementById('sansaToggle').style.display = 'none';
-  document.getElementById('aryaToggle').style.display = 'none';
-  document.getElementById('tyrionToggle').style.display = 'none';
-  document.getElementById('cerceiToggle').style.display = 'none';
-  document.getElementById('jamieToggle').style.display = 'none';
-  document.getElementById('daeneyrsToggle').style.display = 'none';
-  document.getElementById('khalToggle').style.display = 'none';
-  var selectedCharacter = document.getElementById(characterInfo);
-
-  if (selectedCharacter.style.display === "none") {
-    selectedCharacter.style.display = "block";
-  } else {
-    selectedCharacter.style.display = "none";
-  }
-}
-//API fetch and creating the cards
-
-function getCharacterData(Url, id) {
-  fetch(Url)
+//Open toggle information
+function toggleInformation(name,url){
+  if(count < 1){
+    document.getElementById(name+'Loading').style.display = 'block';
+    document.getElementById(name+'Toggle').style.display = 'block';
+    console.log(url);
+    fetch(url)
     .then((response) => {
-      return response.json();
+      return response.json()
     })
     .then((result) => {
-      console.log(result);
-      createPlayerInfo(result, id);
-    });
+      displayCharacterInformation(result,name);
+      count ++;
+    })
+  }
+  else{
+    console.log('Do nothing')
+  }
 }
 
+function displayCharacterInformation(result,id){
+  document.getElementById(id+'Loading').style.display = 'none';
+  var playerInfo = document.getElementById(id+'Toggle');
+  var displayPlayer =
+    '<div class="'+id+'Data"><i class="[ fa fa-times ] [ close ]" onclick="hideCharacterInformation()"></i><h2 class="[ characterName--small ]">Title: ' +
+    result.titles[0] + '</h2>' +
+    '<p class="[ characterText ]"><span class="[ characterText--color ]">Culture: </span>' + result.culture + '</p>' +
+    '<p class="[ characterText ]"><span class="[ characterText--color ]">Gender: </span> ' + result.gender + '</p>' +
+    '<p class="[ characterText ]"><span class="[ characterText--color ]">Aliases: </span>' + result.aliases + '</p></div>';
+  playerInfo.innerHTML += displayPlayer;
+}
+
+//API fetch and creating the cards
 function getCharacterName(Url, id) {
   fetch(Url)
     .then((response) => {
@@ -68,17 +65,6 @@ function getCharacterName(Url, id) {
     });
 }
 
-function createPlayerInfo(result, id) {
-  var playerInfo = document.getElementById(id);
-  var displayPlayer =
-    '<i class="[ fa fa-times ] [ close ]" onclick="toggle_information()"></i><h2 class="[ characterName--small ]">Title: ' +
-    result.titles[0] + '</h2>' +
-    '<p class="[ characterText ]"><span class="[ characterText--color ]">Culture: </span>' + result.culture + '</p>' +
-    '<p class="[ characterText ]"><span class="[ characterText--color ]">Gender: </span> ' + result.gender + '</p>' +
-    '<p class="[ characterText ]"><span class="[ characterText--color ]">Aliases: </span>' + result.aliases + '</p></div>';
-  playerInfo.innerHTML += displayPlayer;
-};
-
 function createHeader(result, id) {
   var replaceTitle = document.getElementById(id);
   replaceTitle.innerHTML = "You chose<br> " + result.name;
@@ -88,17 +74,6 @@ function changeHeader() {
   var reduzeTitle = document.querySelector('.headers');
   reduzeTitle.classList.add("headers__character");
 }
-
-getCharacterData('https://www.anapioficeandfire.com/api/characters/2024', "tormundToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/2126', "yrgitteToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/583', "johnToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/957', "sansaToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/148', "aryaToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/1052', "tyrionToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/238', "cerceiToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/529', "jamieToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/271', "daeneyrsToggle");
-getCharacterData('https://www.anapioficeandfire.com/api/characters/1278', "khalToggle");
 
 function removeTitle() {
   var removeName = document.querySelectorAll('.characterName');

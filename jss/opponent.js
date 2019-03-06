@@ -1,5 +1,5 @@
 //VARIABLES
-var countCharacters = 1;
+var countCharacters = 0;
 
 // Local storage functions
 function resetLocalStorage() {
@@ -14,47 +14,114 @@ function removeValueFromLocalStorage(key) {
   localStorage.removeItem(key);
 };
 
-//FETCH functions
-function getPlayerTwo(Url, id) {
-  fetch(Url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((result) => {
-      console.log(result);
-      createPlayerTwo(result, id);
-    });
+//START GAME BUTTON
+var twoPlayers = false;
+var startGame = document.getElementById("startGame");
+startGame.addEventListener(
+  "click",
+  function() {
+    if (localStorage.length === 2) {
+      twoPlayers = true;
+      window.location.href = 'game.html';
+    }
+    if (twoPlayers == false) {
+      document.getElementById('warning').style.display = "block";
+    }
+  }
+);
+
+
+//CHOOSE PLAYER TWO
+function selectPlayerTwo(name) {
+  function changeButton() {
+    document.getElementById('warning').style.display = "none";
+    var bottomButton = document.getElementById('startGame');
+    var opponentSelected = document.getElementById('opponent' + name);
+    opponentSelected.classList.add("btn--primary");
+    bottomButton.classList.add("btn--primary");
+    opponentSelected.innerHTML = '<i class="[ fa fa-check ] [ validation ]"></i>';
+    addValuesToLocalStorage('Player' + name, name);
+  }
+  function removeValue() {
+    var opponentDelete = document.getElementById('opponent' + name);
+    var bottomButton = document.getElementById('startGame');
+    opponentDelete.classList.remove("btn--primary");
+    bottomButton.classList.remove("btn--primary");
+    opponentDelete.innerHTML = 'Select';
+    removeValueFromLocalStorage('Player' + name, name);
+  }
+  switch (name) {
+    case 'ygritte':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'jon':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'sansa':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'arya':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'tormund':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'cercei':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'daenerys':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'tyrion':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'jamie':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    case 'khal':
+      if (localStorage.length === 1) {
+        changeButton();
+      } else {
+        removeValue();
+      }
+      break;
+    default:
+      console.log('There seem to be a problem, please try again later');
+  }
 }
-
-//FUNCTIONS
-function activeButton(){
-  var oppnentSelected = document.getElementById('opponent');
-  oppnentSelected.classList.add("btn--primary");
-  oppnentSelected.innerHTML = '<i class="[ fa fa-check ] [ validation ]"></i>';
-}
-
-//Create players
-function createPlayerTwo(result, id){
-  var playerTwoInfo = document.getElementById(id);
-  var displayPlayerTwo =
-  '<div class="row"> <div class="[ player ]"> <div class="[ col-xs-1 ]">'+
-  '<img class="[ player__image ] [ animated fadeInUp ]" src="images/' + result.name + '-avatar.jpg" alt="'+ result.name +'"></div>'+
-  '<div class="[ col-xs-11 ][ player--border ]">'+
-  '<h4 class=" [ animated fadeInUp ]"><span class="[ player__character player__character--wildlings ]">'+ result.name + '</span> </h4>'+
-  '<h3 class="[ player__name ]">Player Two</h3>'+
-  '<a class="[ btn btn--small btn--second ][ animated fadeInUp ]" id="'+ result.name +'" onclick="selectPlayerTwo("'+ result.name +'")">Select</a>'+
-  '</div>'+ '</div>'+ '</div>'+ '</div>'+ '<div class="[ row ]">'+ '<div class="[ col-sm-12 ][ border ]"></div>'+
-  '</div>';
-  playerTwoInfo.innerHTML += displayPlayerTwo;
-};
-
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/2024', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/2126', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/583', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/957', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/148', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/1052', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/238', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/529', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/271', "playerTwo");
-getPlayerTwo('https://www.anapioficeandfire.com/api/characters/1278', "playerTwo");
